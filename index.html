@@ -487,9 +487,13 @@ footer{font-family:'Aref Ruqaa',serif;font-size:16px;color:#5A5644}
 <style>
 /* ===== Mobile reflow for the slimmed page: tabs + app showcase only ===== */
 @media(max-width:700px){
-  .switcher{padding:10px 0}
-  .switcher-in{flex-direction:column;align-items:stretch;gap:8px}
-  .app-tab{min-width:0;width:100%;transform:none!important}
+  .switcher{padding:8px 0}
+  .switcher-in{flex-direction:row;flex-wrap:nowrap;align-items:stretch;gap:6px}
+  .app-tab{min-width:0;width:auto;flex:1 1 0;padding:6px 7px;gap:6px;transform:none!important;border-width:1.6px;border-radius:10px;justify-content:center;min-height:44px}
+  .app-tab .ic{width:28px;height:28px;font-size:15px;flex-shrink:0}
+  .app-tab>span:last-child{min-width:0}
+  .app-tab b{font-size:12.5px;line-height:1.25;white-space:nowrap}
+  .app-tab small{display:none}
   .stage{gap:14px;padding:14px 0 26px}
   #scrList{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .scr-btn{margin-bottom:0}
@@ -508,6 +512,9 @@ footer{font-family:'Aref Ruqaa',serif;font-size:16px;color:#5A5644}
 @media(max-width:380px){
   #scrList{grid-template-columns:1fr}
   .kpis{grid-template-columns:1fr 1fr}
+  .app-tab{padding:5px 4px;gap:4px}
+  .app-tab .ic{width:26px;height:26px;font-size:14px}
+  .app-tab b{font-size:11.5px}
 }
 </style>
 </head>
