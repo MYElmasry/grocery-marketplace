@@ -147,6 +147,7 @@ a{color:var(--green-d)}
 .map-pin{position:absolute;background:var(--green);color:#fff;border-radius:12px;padding:5px 10px;font-size:12px;font-weight:800;box-shadow:var(--shadow)}
 .status-pill{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:4px 12px;font-size:12.5px;font-weight:800}
 .st-new{background:#DBEAFE;color:#1E40AF}.st-prep{background:var(--amber-soft);color:#92400E}.st-way{background:#E0E7FF;color:#3730A3}.st-done{background:var(--green-soft);color:var(--green-d)}.st-late{background:var(--red-soft);color:var(--red)}
+.st-pickup{background:#CCFBF1;color:#115E59}
 /* merchant */
 .m-head{background:var(--dark);color:#fff;border-radius:0 0 22px 22px;padding:14px 16px 16px;margin:-6px -16px 14px}
 .m-head .row{display:flex;justify-content:space-between;align-items:center}
@@ -516,6 +517,135 @@ footer{font-family:'Aref Ruqaa',serif;font-size:16px;color:#5A5644}
   .app-tab .ic{width:26px;height:26px;font-size:14px}
   .app-tab b{font-size:11.5px}
 }
+/* ===== Round additions: promo, wallet, addresses, help ===== */
+.promo-row{display:flex;gap:8px}
+.promo-row input{flex:1;min-width:0;border:1.6px solid #CFC7B2;border-radius:6px 12px 5px 11px;padding:10px 12px;font-family:inherit;font-size:14.5px;min-height:46px;background:#fff}
+.promo-err{color:var(--red);font-size:13px;font-weight:800;margin-top:7px}
+.promo-ok{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#F2F8EC;border:1.6px solid var(--green-d);border-radius:6px 12px 5px 11px;padding:10px 12px;font-size:14px;font-weight:700;color:var(--green-d)}
+.promo-ok button{border:0;background:none;font-weight:900;color:var(--pen);min-height:32px;padding:2px 6px;font-size:14px}
+.wallet-note{background:#FFF3D6;border:1.6px dashed var(--ink2);border-radius:10px 3px 12px 4px;padding:10px 12px;font-size:14px;margin-top:10px;color:#5C430A}
+.wtoggle{display:flex;gap:12px;align-items:center;background:#fff;border:1.6px solid #CFC7B2;border-radius:5px 14px 6px 13px;padding:13px;width:100%;text-align:right;margin-bottom:10px;cursor:pointer}
+.wtoggle.on{border:2px solid var(--ink2);background:#F2F8EC;box-shadow:var(--hard-sm)}
+.wtoggle b{font-size:15px;display:block}
+.wtoggle span{font-size:13px;color:var(--muted)}
+.wtoggle .sw{width:50px;height:28px;border-radius:99px;background:#DCD4BE;border:1.6px solid var(--ink2);position:relative;flex-shrink:0;transition:background .2s}
+.wtoggle .sw::after{content:"";position:absolute;top:2px;inset-inline-start:3px;width:20px;height:20px;border-radius:50%;background:#fff;border:1.6px solid var(--ink2);transition:transform .2s}
+.wtoggle.on .sw{background:var(--green)}
+.wtoggle.on .sw::after{transform:translateX(-21px)}
+.covered-note{background:#F2F8EC;border:1.6px solid var(--green-d);border-radius:6px 12px 5px 11px;padding:11px 12px;font-size:14.5px;font-weight:800;color:var(--green-d);margin:0 0 10px}
+.mini-btn{border:1.6px solid var(--ink2);background:var(--paper2);border-radius:4px 10px 3px 9px;font-weight:800;font-size:13px;padding:6px 12px;min-height:38px;box-shadow:2px 2px 0 rgba(32,36,31,.85);white-space:nowrap;color:var(--ink2)}
+.mini-btn.light{background:#fff}
+.wallet-card{background:#173D27;color:#FFF6DE;border:2px solid #0C2417;border-radius:8px 18px 7px 16px;box-shadow:var(--hard-sm);padding:14px;margin-bottom:12px}
+.wallet-card .wc-top{display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:16px}
+.wallet-card .wc-top b{font-family:'IBM Plex Mono',monospace;font-size:24px;color:var(--mustard)}
+.wallet-card p{margin:6px 0 0;font-size:13.5px;opacity:.92}
+.menu-row{display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1.6px solid #D8D0B8;border-radius:6px 14px 5px 13px;padding:12px 14px;margin-bottom:9px;font-size:15px;font-weight:800;text-align:right;color:var(--ink2)}
+.menu-row.static{cursor:default}
+.menu-row .mr-v{margin-inline-start:auto;font-size:12.5px;color:var(--muted);font-weight:700}
+.menu-row .mr-a{color:var(--pen);font-weight:900;font-size:18px}
+.addr-card{display:flex;gap:11px;background:#fff;border:1.6px solid #D8D0B8;border-radius:6px 14px 5px 13px;padding:13px;margin-bottom:10px;align-items:flex-start}
+.addr-card.def{border:2px solid var(--ink2);box-shadow:var(--hard-sm);background:#FDFBF2}
+.addr-card .addr-ic{font-size:24px}
+.addr-card b{display:block;font-size:15px}
+.addr-card span{display:block;font-size:13px;color:var(--muted)}
+.addr-card .def-tag{display:inline-block;background:var(--green);color:#fff;font-size:11px;border-radius:6px;padding:1px 8px;margin-inline-start:6px;vertical-align:2px}
+.addr-card .def-check{width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;flex-shrink:0}
+.addr-form{background:#fff;border:1.6px dashed var(--ink2);border-radius:6px 14px 5px 13px;padding:14px;margin-bottom:12px}
+.txt-in{width:100%;border:1.6px solid #CFC7B2;border-radius:6px 12px 5px 11px;padding:11px 12px;font-family:inherit;font-size:14.5px;min-height:46px;background:#fff;margin-bottom:10px}
+.faq{background:#fff;border:1.6px solid #D8D0B8;border-radius:6px 14px 5px 13px;margin-bottom:9px;overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px;background:none;border:0;padding:12px 14px;font-size:14.5px;font-weight:800;text-align:right;color:var(--ink2)}
+.faq-q span:last-child{color:var(--pen);font-size:19px;font-weight:900}
+.faq-a{padding:10px 14px 13px;font-size:14px;color:#33413A;border-top:1.4px dashed #D8D0B8}
+</style>
+
+<style>
+.store-card{display:flex;gap:12px;background:#fff;border:1.6px solid var(--ink2);border-radius:6px 16px 7px 15px;box-shadow:var(--hard-sm);padding:13px;margin-bottom:12px;cursor:pointer;align-items:flex-start}
+.store-card.closed{opacity:.6;box-shadow:none;border-color:#CFC7B2}
+.store-logo{width:58px;height:58px;border-radius:50% 46% 52% 48%/48% 52% 46% 54%;border:1.6px solid var(--ink2);display:grid;place-items:center;font-size:28px;flex-shrink:0}
+.store-logo.big{width:66px;height:66px;font-size:32px}
+.store-meta{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:5px;font-size:13px;font-weight:800;color:var(--green-d)}
+.store-head{display:flex;gap:12px;background:#fff;border:2px solid var(--ink2);border-radius:8px 18px 7px 16px;box-shadow:var(--hard-sm);padding:14px;margin:12px 0}
+</style>
+<style>
+/* ===== Youssef round: barcode prep, delivery page, instructions, rating ===== */
+.prep-item{background:#fff;border:1.6px solid #D8D0B8;border-radius:6px 14px 5px 13px;padding:12px;margin-bottom:10px}
+.prep-item.complete{border:2px solid var(--green-d);background:#F2F8EC}
+.prep-item.short{border:2px solid var(--pen);background:#FDF3F1}
+.prep-item .pi-top{display:flex;gap:10px;align-items:center}
+.prep-item .pi-img{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;font-size:24px;flex-shrink:0}
+.prep-item h5{margin:0;font-size:15px}
+.prep-item .pi-unit{font-size:12.5px;color:var(--muted)}
+.pi-count{margin-inline-start:auto;text-align:center;flex-shrink:0}
+.pi-count b{font-family:'IBM Plex Mono',monospace;font-size:21px;color:var(--green-d);display:block;line-height:1.15}
+.pi-count span{font-size:11.5px;color:var(--muted);font-weight:700}
+.scan-btn{width:100%;margin-top:10px;border:2px solid #0C3B21;background:var(--green);color:#fff;border-radius:6px 14px 5px 12px;box-shadow:3px 3px 0 #0C3B21;font-weight:900;font-size:15.5px;padding:12px;display:flex;justify-content:center;align-items:center;gap:8px}
+.scan-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #0C3B21}
+.scan-btn:disabled{background:#B9C4B4;border-color:#8A968A;box-shadow:none}
+.scan-ok{display:flex;align-items:center;gap:8px;margin-top:10px;background:var(--green-soft);border:1.6px solid var(--green-d);border-radius:6px 12px 5px 11px;padding:9px 12px;font-weight:900;color:var(--green-d);font-size:14.5px}
+.scan-ok.man{background:#FFF3D6;border-color:var(--ink2);color:#5C430A}
+.nobar-link{display:inline-block;margin-top:9px;background:none;border:0;color:var(--pen);font-weight:800;font-size:13px;text-decoration:underline wavy rgba(214,58,47,.55) 1.2px;text-underline-offset:4px;min-height:32px;padding:2px 0;cursor:pointer}
+.reason-row{display:flex;gap:8px;margin-top:8px}
+.reason-row button{flex:1}
+.short-link{display:inline-block;margin-top:2px;background:none;border:0;color:var(--muted);font-weight:700;font-size:12.5px;text-decoration:underline;min-height:32px;padding:2px 0;cursor:pointer}
+.warn-banner{background:#FDF3F1;border:2px solid var(--pen);border-radius:6px 14px 5px 13px;padding:12px 14px;margin-bottom:12px;font-size:14px;color:#7A130C}
+.warn-banner b{display:block;font-size:15px;margin-bottom:2px}
+.instr-box{background:#FFF3D6;border:2.5px solid var(--ink2);border-radius:10px 3px 12px 4px;padding:14px;margin-bottom:12px;box-shadow:var(--hard-sm)}
+.instr-box .ib-t{font-size:12.5px;font-weight:900;color:#92400E;letter-spacing:.2px}
+.instr-box .ib-v{font-size:19px;font-weight:900;line-height:1.5;margin-top:2px}
+.instr-box.empty-i{background:#fff;border-style:dashed;box-shadow:none}
+.instr-box.empty-i .ib-v{font-size:14.5px;font-weight:700;color:var(--muted)}
+.addr-lines{background:#fff;border:1.6px solid #D8D0B8;border-radius:6px 14px 5px 13px;padding:6px 14px;margin-bottom:12px}
+.addr-lines .al{display:flex;gap:10px;padding:9px 0;border-bottom:1.4px dashed #E3EAE4;font-size:14.5px}
+.addr-lines .al:last-child{border-bottom:0}
+.addr-lines .al b{min-width:92px;color:var(--green-d);flex-shrink:0}
+.addr-lines .al.land{background:#F2F8EC;margin:0 -14px;padding:9px 14px}
+.stars{display:flex;gap:6px;justify-content:center;margin:6px 0 4px}
+.stars button{border:0;background:none;font-size:36px;line-height:1;padding:2px 4px;min-height:48px;color:#D8D0B8;cursor:pointer}
+.stars button.lit{color:var(--amber);text-shadow:1.5px 1.5px 0 rgba(32,36,31,.35)}
+.rate-box{background:#FFFDF4;border:2px solid var(--ink2);border-radius:8px 18px 7px 16px;box-shadow:var(--hard-sm);padding:14px;margin:0 0 12px;text-align:center}
+.rate-box h4{margin:0;font-family:'Marhey',cursive;font-weight:700;font-size:17px}
+.rate-box textarea{text-align:right}
+textarea.txt-in{resize:vertical;line-height:1.55}
+</style>
+<style>
+/* ===== Camera scanner overlay (merchant prep) ===== */
+.cam-overlay{position:absolute;inset:0;z-index:45;background:radial-gradient(ellipse at 50% 42%,#2A332B 0%,#141A15 55%,#0A0F0B 100%);color:#F4F1E6;display:flex;flex-direction:column;padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
+.cam-overlay.flash-on{background:radial-gradient(ellipse at 50% 42%,#4A554A 0%,#232B24 55%,#12160F 100%)}
+.cam-top{display:flex;align-items:flex-start;gap:10px}
+.cam-top .cam-prod{flex:1;min-width:0}
+.cam-top .cam-prod b{display:block;font-size:16.5px;line-height:1.35}
+.cam-top .cam-prod span{font-size:13px;color:#C9CFC2;font-weight:700}
+.cam-x{width:42px;height:42px;min-height:42px;border-radius:50%;border:1.6px solid rgba(244,241,230,.5);background:rgba(255,255,255,.08);color:#F4F1E6;font-size:18px;font-weight:900;display:grid;place-items:center;flex-shrink:0;padding:0}
+.cam-guide{text-align:center;font-size:15px;font-weight:800;margin:20px 6px 14px;line-height:1.6}
+.cam-guide b{color:var(--mustard)}
+.cam-stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
+.cam-frame{position:relative;width:250px;height:190px}
+.cam-frame .fc{position:absolute;width:44px;height:44px;border:0 solid var(--mustard)}
+.cam-frame .fc.tl{top:0;inset-inline-start:0;border-top-width:5px;border-inline-start-width:5px;border-start-start-radius:14px}
+.cam-frame .fc.tr{top:0;inset-inline-end:0;border-top-width:5px;border-inline-end-width:5px;border-start-end-radius:14px}
+.cam-frame .fc.bl{bottom:0;inset-inline-start:0;border-bottom-width:5px;border-inline-start-width:5px;border-end-start-radius:14px}
+.cam-frame .fc.br{bottom:0;inset-inline-end:0;border-bottom-width:5px;border-inline-end-width:5px;border-end-end-radius:14px}
+.cam-code{position:absolute;inset:34px 26px;border-radius:8px;background:repeating-linear-gradient(90deg,#EDEAE0 0 3px,#14161a 3px 5px,#EDEAE0 5px 6px,#14161a 6px 10px,#EDEAE0 10px 13px,#14161a 13px 15px,#EDEAE0 15px 16px,#14161a 16px 21px);opacity:.9;box-shadow:inset 0 0 0 6px rgba(237,234,224,.85)}
+.cam-line{position:absolute;left:8px;right:8px;height:3.5px;border-radius:99px;background:#FF3B30;box-shadow:0 0 12px 2px rgba(255,59,48,.75);animation:scanmove 1.15s ease-in-out infinite alternate}
+@keyframes scanmove{from{top:16px}to{top:calc(100% - 20px)}}
+.cam-hint{text-align:center;font-size:13px;color:#B9C0B2;font-weight:700;margin-top:12px}
+.cam-actions{display:flex;gap:10px;align-items:stretch;margin-top:10px}
+.cam-flash{width:56px;min-height:52px;border-radius:14px;border:1.6px solid rgba(244,241,230,.45);background:rgba(255,255,255,.08);color:#F4F1E6;font-size:22px;display:grid;place-items:center;padding:0}
+.cam-flash.on{background:var(--mustard);color:#20241F;border-color:var(--mustard)}
+.cam-manual-btn{flex:1;border:2px solid #F4F1E6;background:rgba(255,255,255,.06);color:#F4F1E6;border-radius:14px;font-weight:900;font-size:15px;padding:12px}
+.cam-noread{display:block;margin:12px auto 0;background:none;border:0;color:#F2B33D;font-weight:800;font-size:13.5px;text-decoration:underline wavy rgba(242,179,61,.6) 1.2px;text-underline-offset:4px;min-height:34px;cursor:pointer}
+.cam-manual{background:rgba(255,255,255,.07);border:1.6px solid rgba(244,241,230,.35);border-radius:14px;padding:14px;margin-top:6px}
+.cam-manual label{display:block;font-size:13.5px;font-weight:800;margin-bottom:8px}
+.cam-manual input{width:100%;border:2px solid #F4F1E6;border-radius:10px;padding:11px 12px;font-family:'IBM Plex Mono',monospace;font-size:17px;letter-spacing:1.5px;min-height:50px;background:#FFFDF6;color:#20241F;text-align:left}
+.cam-err{color:#FFB4A8;font-size:13.5px;font-weight:800;margin-top:8px}
+.cam-demo-hint{font-size:12px;color:#9AA392;margin-top:8px;font-weight:700}
+.cam-success{position:absolute;inset:0;background:rgba(22,163,74,.93);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;animation:camflash .3s ease-out}
+@keyframes camflash{from{opacity:0}to{opacity:1}}
+.cam-success .ck{width:88px;height:88px;border-radius:50%;background:#fff;color:var(--green);display:grid;place-items:center;font-size:48px;font-weight:900;border:3px solid #0C3B21;box-shadow:4px 4px 0 rgba(12,59,33,.6);margin-bottom:14px}
+.cam-success b{font-size:19px;line-height:1.5}
+.cam-success .bc{font-family:'IBM Plex Mono',monospace;font-size:16px;letter-spacing:1px;background:rgba(12,59,33,.35);border-radius:8px;padding:4px 14px;margin-top:8px;direction:ltr}
+.cam-success span{font-size:13.5px;font-weight:700;opacity:.92;margin-top:10px}
+@media (prefers-reduced-motion: reduce){.cam-line{animation:none;top:50%}.cam-success{animation:none}}
 </style>
 </head>
 <body>
@@ -549,53 +679,69 @@ var PRODUCTS=[
 ];
 var CATS=[["أ","ألبان وأجبان","#DCEFDC"],["خ","خضار وفاكهة","#FBE3D3"],["م","مخبوزات","#F7E8C3"],["ل","لحوم وفراخ","#F8DADA"],["ب","بقالة","#E4E7D8"],["ع","عناية ومنزل","#DDEBF2"],["ش","مشروبات","#FBEAC8"],["ح","حلويات وسناكس","#F3DFF0"]];
 
+var STORES=[
+ {id:1,name:"سوبر ماركت النور",type:"سوبر ماركت",dist:"0.4 كم",fee:30,eta:"25–35 دقيقة",rating:"4.8",rc:214,open:true,addr:"شارع النصر، سموحة",hours:"8 صباحاً – 12 منتصف الليل",emoji:"🏪",bg:"#EAF3E4"},
+ {id:2,name:"بقالة الخير",type:"بقالة",dist:"0.9 كم",fee:20,eta:"20–30 دقيقة",rating:"4.6",rc:96,open:true,addr:"شارع المشير أحمد إسماعيل، سيدي جابر",hours:"7 صباحاً – 1 فجراً",emoji:"🧺",bg:"#FDF3E3"},
+ {id:3,name:"ماركت البركة",type:"سوبر ماركت",dist:"1.3 كم",fee:25,eta:"30–40 دقيقة",rating:"4.7",rc:158,open:true,addr:"شارع بورسعيد، سبورتنج",hours:"8 صباحاً – 11 مساءً",emoji:"🛒",bg:"#EAF4FB"},
+ {id:4,name:"بقالة الورد",type:"بقالة",dist:"1.8 كم",fee:35,eta:"35–45 دقيقة",rating:"4.5",rc:41,open:false,addr:"شارع توت عنخ آمون، سموحة",hours:"9 صباحاً – 10 مساءً",emoji:"🌸",bg:"#F3DFF0"}
+];
+var STORE_STOCK={1:[1,2,3,4,5,6,7,8,9,10,11,12],2:[1,3,4,6,7,10,12],3:[1,2,5,7,8,9,11],4:[2,4,10]};
+var STORE_PRICE={1:{},2:{1:45,3:15,4:20,6:95,10:37},3:{1:41,7:36,11:42,12:11},4:{}};
+function storeById(id){return STORES.find(function(x){return x.id===id})||STORES[0]}
+function storePrice(sid,p){var m=STORE_PRICE[sid];return (m&&m[p.id])||p.price}
+
 var APPS={
  customer:{label:"تطبيق العميل",sub:"موبايل · تسوق",icon:"ع",type:"phone",
   screens:[
-   {id:"c-home",n:"الرئيسية",who:"أول شاشة العميل",points:["بحث عربي ذكي بيتسامح مع أخطاء الإملاء (pg_trgm) — شغل الكتالوج وجودة البحث.","التوصيل السريع من أقرب محل ليك باين من أول لحظة — المحل جنبك فطلبك مش بياخد وقت في الطريق.","الأقسام والعروض قبل أي حاجة — العميل بيشتري منتجات مش محلات."],rule:"قاعدة المنتج أولاً: مفيش اسم محل واحد في تجربة العميل كلها — التوزيع على المحلات بيحصل داخلياً."},
-   {id:"c-cat",n:"قسم / منتجات",who:"تصفح قسم واحد",points:["فلترة سريعة بشرائح (الكل / عروض / بالوزن / معبأ).","منتجات الوزن مكتوب عليها وحدتها بوضوح (500 جم) من البطاقة نفسها.","النافد مش بيظهر أصلاً — القائمة دي هي المتاح فعلياً بس."],rule:"قاعدة التوفر: المنتج بيظهر بس لو كميته معروفة ومتاح — العميل عمره ما يطلب ويكتشف إنه خلص."},
+   {id:"c-home",n:"الرئيسية — المحلات",who:"قائمة محلات قريبة",points:["العميل بيشوف المحلات القريبة منه الأول وبيختار محل معين يطلب منه — زي تطبيقات السوق المعروفة.","ترتيب القائمة: الأقرب أولاً — وعند تساوي القرب، الأعلى تقييماً بييجي الأول (أفضلية بسيطة للتقييم من غير ما القرب يخسر).","بطاقة كل محل فيها: الاسم، النوع (سوبر ماركت/بقالة)، المسافة، رسم توصيل المحل ده تحديداً (كل محل بيحدده بنفسه فبيختلف من محل لمحل)، وقت التوصيل التقديري، التقييم وعدد التقييمات، وحالة مفتوح/مغلق.","البحث وعنوان التوصيل وبانر العروض الرئيسي (عروض محلات المنصة نفسها) في مكانهم فوق القائمة زي ما هما.","المحل المغلق باين حالته ومش بيستقبل طلبات لحد ما يفتح."],rule:"قاعدة المحلات أولاً: العميل بيختار المحل بنفسه وبيطلب منه مباشرة — كل طلب من محل واحد اختاره العميل. والتقييم بقى بيفرق: تقييمات العملاء بتحدّث رقم المحل على كرته وبتقدّمه عند تساوي القرب."},
+   {id:"c-store",n:"شاشة المحل",who:"قلب التجربة — منتجات محل واحد",points:["هيدر المحل: الاسم والعنوان وساعات العمل ورسم توصيل المحل ده (بيحدده المحل بنفسه) والتقييم والمسافة ووقت التوصيل التقديري.","صف أقسام المحل بيصفّي منتجات المحل ده بس — وبأسعار المحل نفسه، وكل محل ليه أسعاره.","النافد عند المحل ده مش بيظهر أصلاً — القائمة دي هي المتاح فعلياً عنده بس."],rule:"قاعدة التوفر: المنتج بيظهر بس لو كميته معروفة ومتاح عند المحل اللي العميل اختاره — العميل عمره ما يطلب ويكتشف إنه خلص."},
    {id:"c-prod",n:"صفحة منتج",who:"تفاصيل + وزن + بدائل",points:["اختيار كمية بالوحدات لمنتجات الوزن مع تنبيه سماحية ±10% في السعر النهائي.","سياسة الاستبدال بتتحدد هنا أو من السلة.","منتجات مشابهة لرفع قيمة السلة."],rule:"منتجات الوزن: الفرق البسيط في الوزن الفعلي بيتحاسب تلقائياً وبيبان للعميل قبل ما يدفع."},
-   {id:"c-cart",n:"السلة",who:"مراجعة قبل الدفع",points:["سطر واحد مدمج «التوصيل والخدمة» — شفافية من غير بنود مخفية.","مفيش حد أدنى للطلب خالص: العميل يقدر يطلب صنف واحد بأي سعر، حتى لو أقل من 75 ج — وزر إتمام الطلب شغال دايماً. ومفيش توصيل مجاني في فترة الإطلاق: رسوم التوصيل والخدمة ثابتة وباينة على كل طلب.","اختيار سياسة الاستبدال عند نفاد صنف أثناء التحضير."],rule:"قراران محسومان (25 نوفمبر): مفيش حد أدنى للطلب أبداً — الطلب الصغير بيكمل عادي، واقتصادياً بيتغطى برسوم التوصيل والخدمة. ومفيش توصيل مجاني في أول 90 يوم: دي فترة عمولة التاجر فيها صفر، فأي توصيل على حسابنا هيبقى خسارة صافية 15–20 ج على كل طلب مؤهّل — العميل بيدفع رسوم التوصيل والخدمة دايماً في الفترة دي. التوصيل المجاني فوق حد معيّن ممكن يرجع بعد ما العمولة تبدأ، وحدّه يتحدد وقتها من بيانات السلال الحقيقية (175 ج كانت رقماً مقترحاً مش قراراً). النموذج المالي المقترح بعد فترة الإطلاق: عمولة 8% من التاجر (مش من العميل) + رسم خدمة ثابت يظهر مدمجاً مع التوصيل."},
-   {id:"c-pay",n:"الدفع",who:"إتمام الطلب",points:["كارت ومحافظ وInstaPay عبر بوابة دفع — بيانات الكارت مش بتتخزن عندنا أبداً.","الكاش متاح عند الاستلام جنب وسائل الدفع الأونلاين.","عنوان التوصيل داخل منطقة الإطلاق (سموحة + سيدي جابر + سبورتنج)."],rule:"الدفع الأونلاين = مفيش أي كود استلام. العميل بيدفع وخلاص — الاحتكاك صفر."},
-   {id:"c-track",n:"تتبع الطلب",who:"حالة حية",points:["خط زمني واضح: اتقبل ← بيتحضر ← في الطريق ← اتسلم.","وقت الوصول المتوقع ظاهر وكبير وبيتحدث لحظة بلحظة — والمحل قريب أصلاً (نطاق توصيل صغير ~1 كم حوالين كل محل) فالرحلة قصيرة بطبيعتها.","العميل شاهد صامت: إشعار عند الخروج والتسليم."],rule:"الإغلاق التلقائي: GPS + 30–45 دقيقة من غير شكوى = الطلب اتسلم — التسوية مش رهينة ضغطة مندوب."},
-   {id:"c-orders",n:"طلباتي / حسابي",who:"سجل وإعادة طلب",points:["إعادة طلب سابقة بضغطة واحدة — أهم محرك تكرار في البقالة.","حالة كل طلب بنفس شارات الألوان الموحدة.","المرتجعات: المقفول خلال 14 يوم، والطازج بعيب جودة بيتصور ويتحسم في نفس اليوم."],rule:"قاعدة المرتجعات: عيب الجودة في الطازج = استرداد/استبدال فوري من غير ما المنتج يرجع أصلاً."}
+   {id:"c-cart",n:"السلة",who:"مراجعة قبل الدفع",points:["هيدر السلة بيقول الطلب من أنهي محل بالاسم — السلة مرتبطة بمحل واحد بس، ولو حاولت تضيف منتج من محل تاني وانت عندك حاجات في السلة، بيطلع تنبيه: «سلتك فيها منتجات من محل تاني — تبدأ سلة جديدة؟» بزرارين (ابدأ سلة جديدة / خليك في سلتك).","سطر التوصيل بيبقى «توصيل (اسم المحل): X ج» — الرسم بتاع المحل اللي العميل اختاره حالياً، لأن كل محل بيحدد رسم توصيله بنفسه.","مفيش حد أدنى للطلب خالص: العميل يقدر يطلب صنف واحد بأي سعر، حتى لو أقل من 75 ج — وزر إتمام الطلب شغال دايماً. ومفيش توصيل مجاني في فترة الإطلاق: رسم توصيل المحل باين في كارت المحل قبل الطلب وبيتطبق على كل طلب توصيل.","اختيار سياسة الاستبدال عند نفاد صنف أثناء التحضير."],rule:"قراران محسومان (25 نوفمبر): مفيش حد أدنى للطلب أبداً — الطلب الصغير بيكمل عادي، واقتصادياً بيتغطى برسم التوصيل اللي بيحدده المحل. ومفيش توصيل مجاني في أول 90 يوم: دي فترة عمولة التاجر فيها صفر، فأي توصيل على حسابنا هيبقى خسارة صافية 15–20 ج على كل طلب مؤهّل — العميل بيدفع رسم توصيل المحل دايماً في الفترة دي. التوصيل المجاني فوق حد معيّن ممكن يرجع بعد ما العمولة تبدأ، وحدّه يتحدد وقتها من بيانات السلال الحقيقية (175 ج كانت رقماً مقترحاً مش قراراً). النموذج المالي المقترح بعد فترة الإطلاق: عمولة 8% من التاجر (مش من العميل) + رسم خدمة من المنصة لو اتفعّل، بيظهر سطراً منفصلاً عن رسم توصيل المحل."},
+   {id:"c-pay",n:"الدفع",who:"إتمام الطلب",points:["رسم التوصيل المستخدم في الحساب هو رسم المحل المختار حالياً — كل محل بيحدد رسمه بنفسه (في الديمو: النور 30 ج، الخير 20 ج، البركة 25 ج، الورد 35 ج) — وسطر الإيصال بيبقى «توصيل (اسم المحل): X ج». مفيش رسم موحد لكل المحلات.","الباقي بعد المحفظة بيتدفع بكارت أونلاين عبر بوابة دفع — بيانات الكارت مش بتتخزن عندنا أبداً.","الكاش متاح للباقي: عند الاستلام من الباب في التوصيل، أو عند الاستلام من المحل في الـPickup.","عنوان التوصيل داخل منطقة الإطلاق (سموحة + سيدي جابر + سبورتنج) — وزر «تغيير» جنبه بيفتح شاشة «عناويني».","كود خصم شغال تجريبياً: WELCOME10 بيخصم 10% من إجمالي المنتجات وبيضيف سطر «خصم الكود» في الإيصال وبيحدّث الإجمالي وزر التأكيد — والكود الغلط بيطلع رسالة خطأ تحت الحقل.","دفع مقسّم: المحفظة اختيار تطبيق (Toggle) «استخدم رصيد محفظتي (50 ج)» وبتتطبق الأول دايماً على المستحق — بعد خصم الكود وحسب طريقة الاستلام — بمقدار min(الرصيد، المستحق). بعدها بيظهر قسم «الباقي» بقيمته المحسوبة فعلياً والعميل يختار يدفعه كارت أونلاين أو كاش (عند الاستلام من الباب في التوصيل / عند الاستلام من المحل في الـPickup). ولو الرصيد غطى المستحق بالكامل، قسم الباقي بيختفي وبيظهر «المحفظة غطّت طلبك بالكامل». الإيصال فيه سطر «من المحفظة: −50 ج» وسطر أخير «الباقي (كارت/كاش)»، وزر التأكيد بيحدّث نصه ومبلغه حسب التوزيعة النهائية.","حقل نصي اختياري «تعليمات التوصيل (اختياري)» بيظهر مع اختيار التوصيل — بمثال مكتوب جواه «ارن الجرس ومتخبطش» — والعميل يقدر يسيبه فاضي. اللي بيكتبه بيظهر بعد كده للمندوب مظلل وواضح في صفحة التوصيل عند التاجر.","اختيار طريقة الاستلام ببطاقتين واضحتين: «توصيل لباب البيت» (الافتراضي) و«استلام من المحل» — الاختيار شغال وبيأثر على كل اللي بعده.","لو اختار الاستلام: سطر الرسم بيبقى «استلام من المحل — بدون رسم» والإجمالي بينقص بقيمة رسم توصيل المحل المختار حالياً وزر التأكيد بيبقى «أكد الطلب — استلام من المحل»، وبيظهر تحت الاختيار عنوان المحل المختار وساعات عمله. كود WELCOME10 والمحفظة شغالين في الحالتين."],rule:"الدفع الأونلاين = مفيش أي كود استلام. العميل بيدفع وخلاص — الاحتكاك صفر."},
+   {id:"c-track",n:"تتبع الطلب",who:"حالة حية",points:["طلبات التوصيل: اسم المحل اللي طلبت منه وكابتن المحل ده باينين في شاشة التتبع من أول لحظة.","طلبات الاستلام من المحل: مفيش تتبع كابتن — بتظهر حالة التجهيز وبعدين «جاهز للاستلام من [اسم المحل]» مع رقم الطلب كبير وواضح (العميل بيوريه للمحل وهو بيستلم) وعنوان المحل وساعات العمل. رقم الطلب نفسه هو إثبات الاستلام — مفيش كود استلام إضافي.","خط زمني واضح: اتقبل ← بيتحضر ← في الطريق ← اتسلم.","وقت الوصول المتوقع ظاهر وكبير وبيتحدث لحظة بلحظة — والمحل قريب أصلاً (نطاق توصيل صغير ~1 كم حوالين كل محل) فالرحلة قصيرة بطبيعتها.","العميل شاهد صامت: إشعار عند الخروج والتسليم.","تحت التتبع بيظهر تقييم آخر طلب اتسلم من نفس المحل («قيّم المحل» بنجوم 1–5 وتعليق اختياري) — نفس تقييم شاشة «طلباتي» وبيأثر في رقم المحل على كرته."],rule:"الإغلاق التلقائي: GPS + 30–45 دقيقة من غير شكوى = الطلب اتسلم — التسوية مش رهينة ضغطة مندوب."},
+   {id:"c-orders",n:"طلباتي / حسابي",who:"سجل وإعادة طلب",points:["إعادة طلب سابقة بضغطة واحدة — أهم محرك تكرار في البقالة.","حالة كل طلب بنفس شارات الألوان الموحدة.","بعد ما الطلب يوصل، بيظهر «قيّم المحل» تحت الطلب المتسلم: نجوم 1–5 وتعليق اختياري — وبعد الإرسال بيظهر شكر، والتقييم بيحدّث الرقم المعروض على كارت المحل فوراً (متوسط التقييمات + تقييمك). نفس التقييم بيظهر في شاشة تتبع الطلب كمان.","المرتجعات: المقفول خلال 14 يوم، والطازج بعيب جودة بيتصور ويتحسم في نفس اليوم.","تحت الطلبات قسم «حسابي»: كارت «محفظتي» برصيد الاستردادات والمستحقات، وصفوف تنقّل لـ«محفظتي» و«عناويني» و«المساعدة والدعم»."],rule:"قاعدة المرتجعات: عيب الجودة في الطازج = استرداد/استبدال فوري من غير ما المنتج يرجع أصلاً. وقاعدة التقييم: تقييم واحد لكل طلب متسلم — هو اللي بيحرّك رقم المحل قدام كل العملاء وبيقدّمه عند تساوي القرب."},
+   {id:"c-addresses",n:"عناويني",who:"عناوين محفوظة + إضافة عنوان",points:["قائمة بالعناوين المحفوظة (البيت — سموحة «افتراضي» / الشغل — سيدي جابر) وأي عنوان يقدر يبقى الافتراضي بضغطة واحدة.","زر «+ إضافة عنوان جديد» بيفتح نموذج: الاسم (بيت/شغل/أخرى) + العنوان بالتفصيل + رقم الموبايل + زر «تحديد الموقع على الخريطة» بمعاينة خريطة، وزر الحفظ بيضيف العنوان للقائمة فوراً.","الدخول من 3 أماكن: عنوان التوصيل في هيدر الرئيسية (قابل للضغط)، وزر «تغيير» في صف العنوان بشاشة الدفع، وصف «عناويني» في قائمة حسابي."],rule:"العنوان الافتراضي هو عنوان التوصيل التلقائي لأي طلب جديد — والتبديل أو الإضافة بيتموا في أي وقت ومن أي مكان، قبل تأكيد الطلب."},
+   {id:"c-help",n:"المساعدة والدعم",who:"تواصل + أسئلة شائعة + تذاكر",points:["أزرار تواصل مباشرة: واتساب، اتصال هاتفي، بريد إلكتروني.","قسم أسئلة شائعة مختصرة — 3 أسئلة قابلة للفتح (التتبع، مشاكل الجودة والاسترداد، الرسوم والدفع).","صفوف صفحات التواصل (فيسبوك / انستجرام / تيك توك) وزر «افتح تذكرة دعم» لأي مشكلة محتاجة متابعة."],rule:"الدعم بشري ومتاح من جوه التطبيق — والاستردادات بتنزل في محفظة العميل يقدر يدفع بيها في طلباته الجاية."}
   ]},
  merchant:{label:"تطبيق التاجر",sub:"موبايل · تشغيل المحل",icon:"ت",type:"phone",
   screens:[
-   {id:"m-home",n:"لوحة اليوم",who:"نبض المحل",points:["أرقام اليوم في نظرة واحدة: طلبات، مبيعات أونلاين، ومتوسط زمن التحضير.","تنبيه فوري لو فيه طلب جديد مستني قبول.","سكور التنفيذ ظاهر — هو اللي بيحدد نصيب المحل من الطلبات الجاية."],rule:"التوزيع العادل: سكور التنفيذ (قبول سريع + تحضير مظبوط + أخطاء قليلة) بيوزع الطلبات بين المحلات."},
-   {id:"m-orders",n:"طلبات جديدة",who:"قبول بمؤقّت SLA",points:["كل طلب جديد بمؤقّت قبول ملوّن: أخضر ← أصفر ← أحمر.","زر قبول ضخم — الشغل بيتم بسرعة وبإيد واحدة، والقبول بيبدأ مؤقّت التحضير على طول.","الطلبات بتتوزع على محلك حسب مخزونك الفعلي وحصة الأونلاين اللي إنت محددها، فكل طلب يوصلك المفروض يبقى متوفر عندك."],rule:"اتفاق مستوى الخدمة: القبول في دقيقة واحدة والتحضير في 4 دقايق بالكتير — والتأخير المتكرر بيقلل نصيب الطلبات."},
-   {id:"m-detail",n:"تفاصيل طلب / تجهيز",who:"قائمة تجهيز صنف صنف",points:["تعليم كل صنف أثناء التجهيز — مفيش صنف بيتنسى.","الكمية والوحدة بخط كبير، وأصناف الوزن بوزنها المستهدف.","زر «جاهز للتسليم» مش بيشتغل قبل تعليم كل الأصناف."],rule:"طلب مقسّم؟ التاجر بيشوف حصته بس. كود التسليم بين المحلات داخلي — العميل مش بيشوفه أبداً."},
+   {id:"m-home",n:"لوحة اليوم",who:"نبض المحل",points:["أرقام اليوم في نظرة واحدة: طلبات، مبيعات أونلاين، ومتوسط زمن التحضير.","تنبيه فوري لو فيه طلب جديد مستني قبول.","سكور التنفيذ ظاهر — هو اللي بيحدد نصيب المحل من الطلبات الجاية."],rule:"جودة التنفيذ (قبول سريع + تحضير مظبوط + أخطاء قليلة) هي اللي بتبني تقييم محلك قدام العملاء وبتجيبله طلبات أكتر."},
+   {id:"m-orders",n:"طلبات جديدة",who:"قبول بمؤقّت SLA",points:["كل طلب جديد بمؤقّت قبول ملوّن: أخضر ← أصفر ← أحمر.","زر قبول ضخم — الشغل بيتم بسرعة وبإيد واحدة، والقبول بيبدأ مؤقّت التحضير على طول.","الطلبات دي من عملاء اختاروا محلك بنفسهم من قائمة المحلات — وكل طلب يوصلك المفروض يبقى متوفر عندك حسب مخزونك وحصة الأونلاين اللي إنت محددها.","طلبات الاستلام من المحل عليها شارة «استلام من المحل» باينة في قائمة الطلبات، ولما الطلب يجهز زر الإجراء بيبقى «جاهز للاستلام» وبيبعت إشعار للعميل بنفس أسلوب الأزرار الحالية — ومفيش زر رفض أصلاً زي ما هو متفق."],rule:"اتفاق مستوى الخدمة: القبول في دقيقة واحدة والتحضير في 4 دقايق بالكتير — والتأخير المتكرر بيقلل نصيب الطلبات."},
+   {id:"m-detail",n:"تفاصيل طلب / تجهيز",who:"تحضير بكاميرا الباركود — مسحة لكل وحدة",points:["التحضير بالباركود بس: كل منتج مطلوب بيظهر بالكمية المطلوبة وعدد اللي اتحضّر، وزرار «مسح بالكاميرا» عند أي بند بيفتح شاشة كاميرا كاملة جوه الموبايل — مفيش تأكيد يدوي بضغطة على المنتج نفسه، عشان المحضّر ميعلّمش على منتج ملقهوش ويحط بديل من عنده.","شاشة الكاميرا شبه الماسح الحقيقي: خلفية غامقة، إطار توجيه بزوايا في النص، خط مسح أحمر بيتحرك رايح جاي، ونص «وجّه الكاميرا ناحية باركود (اسم المنتج)» مع اسم المنتج وعدد المحضّر/المطلوب، وزرار إلغاء وأيقونة فلاش بتشتغل فعلاً (بتفتح إضاءة الشاشة).","مسحة لكل وحدة: طلب 10 يعني 10 فتحات كاميرا و10 مسحات. في الديمو المسح بينجح تلقائياً بعد حوالي ثانية وربع: صوت بيب + وميض أخضر وعلامة ✓ ورسالة تعريف بالمنتج ورقم باركوده، وبعدها الكاميرا تقفل والعدّاد يزيد واحد — وإلغاء الكاميرا مبيغيّرش أي عدد.","جوه الكاميرا خيار «إدخال الباركود يدوياً»: كتابة الرقم الصح (EAN-13 لكل منتج في الديمو، والتلميح ظاهر جوه الحقل للتجربة) بتأكد المسحة، ورقم غلط بيطلع خطأ «الباركود ده مش بتاع المنتج المطلوب» من غير ما العدّاد يتحرك. ورابط «الباركود مش بيقرأ؟» بيرجع لمسار البديل اليدوي بالأسباب اللي تحت المنتج.","تحت كل منتج رابط صغير «المنتج من غير باركود؟» بيفتح اختيار سبب (من غير باركود / باركود تالف) وبيتسجل كتأكيد يدوي استثنائي بالسبب — للمنتجات اللي فعلاً ملهاش باركود مقروء بس.","الطلب مبيبقاش «جاهز» غير لما كل البنود تكتمل — ولو المحضّر أعلن نقص في بند، بيظهر تنبيه واضح إن النقص بيأثر في تقييم وأداء المحل (بيتخصم من سكور التنفيذ وبيقلل ظهور المحل)."],rule:"قاعدة التحضير: الباركود هو إثبات إن المنتج الصح اتجاب بالعدد الصح — النقص المعلن حادثة دقة بتتسجل على المحل، والتأكيد اليدوي استثناء بسبب مسجل مش الطريقة العادية. طلب التوصيل بعد الجاهزية بيتنقل لصفحة التوصيل — وطلب الاستلام العميل بييجي ياخده بنفسه برقم الطلب، وزرّك بيبقى «جاهز للاستلام» وبيبعتله إشعار."},
+   {id:"m-delivery",n:"صفحة التوصيل",who:"تفاصيل كاملة للمندوب بعد «جاهز للتسليم»",points:["بعد ما الطلب يبقى «جاهز للتسليم»، طلب التوصيل بيتنقل لصفحة توصيل مستقلة — مش بوكس صغير وخلاص — فيها كل اللي المندوب محتاجه في مشوار واحد.","عنوان العميل كامل ومفصّل: المنطقة، الشارع، العمارة، الدور، الشقة، والعلامة المميزة — سطر سطر عشان المندوب يوصل من غير ما يدوّر.","رقم العميل باين مع زرار اتصال مباشر، وزر فتح العنوان على الخريطة.","تعليمات التوصيل اللي العميل كتبها في شاشة الدفع بتظهر هنا في خانة مظللة وواضحة بخط كبير — المندوب لازم يقراها قبل ما يتحرك (مثلاً: «ارن الجرس ومتخبطش»).","ملخص الطلب والدفع: عدد الأصناف والإجمالي وطريقة الدفع (مدفوع أونلاين / كاش عند الاستلام) — وزرار «تم التسليم» بيقفل المشوار."],rule:"طلبات الاستلام من المحل مش بتدخل صفحة التوصيل أصلاً — بتفضل بعرض الاستلام الحالي: الشنطة جاهزة عند الكاشير والعميل بيستلم برقم الطلب. صفحة التوصيل لطلبات التوصيل بس."},
    {id:"m-inv",n:"مخزوني",who:"كميات + حصة الأونلاين",points:["تعديل كمية أي صنف بخطوتين — التحديث السريع هو شرط ظهور المنتج للعملاء.","سلايدر «حصة الأونلاين»: جزء من المخزون محجوز لمبيعات المحل نفسه.","تنبيه أصناف قربت تخلص قبل ما تختفي من التطبيق."],rule:"المخزون مصدر الحقيقة: أي بيع (محل أو أونلاين) بيخصم من نفس العدد — وتكامل POSMate مستقبلاً بيخلي ده تلقائي."},
-   {id:"m-settle",n:"رصيدي والتحويلات",who:"فلوسي توصلي في 24 ساعة",points:["رصيدان منفصلان وواضحان: «متاح» تقدر تطلبه دلوقتي، و«معلّق» (طلبات النهاردة) بيستوي ويبقى متاح تاني يوم T+1 بعد تأكيد التسليم وعدّي نافذة المشاكل.","زرار «اطلب تحويل» بيبعت InstaPay فوري على مدار الساعة — حتى الجمعة والسبت — والفلوس توصل في دقايق، مش آخر الأسبوع.","طلبات الكاش (COD) مش بتتحوّل أصلاً: فلوسها عند التاجر من لحظة التسليم، فبتتعمل مقاصّة — العمولة المستحقة عليها بتتخصم من مستحقات الدفع الأونلاين، وكتير من التجار صافي تحويلهم بيقل أو يبقى صفر."],rule:"قاعدة الـ24 ساعة: الرصيد يستوي T+1 والتحويل InstaPay فوري (رسم 0.1% بحد أقصى 20 ج). شرط التنفيذ الحاسم: بوابة الدفع لازم تسوّي للمنصة نفسها T+1 — لو البوابة أسبوعية (جدول Paymob القياسي) المنصة هتضطر تسلّف التاجر من رأس مالها، وعشان كده سرعة تسوية البوابة عامل حسم في الاختيار (Kashier بتعلن تسوية مرنة/فورية بالاتفاق). ولسه سارية مصفوفة الأخطاء: خطأ المحل على المحل، وخطأ المنصة علينا."}
+   {id:"m-settle",n:"رصيدي والتحويلات",who:"فلوسي توصلي في 24 ساعة",points:["رصيدان منفصلان وواضحان: «متاح» تقدر تطلبه دلوقتي، و«معلّق» (طلبات النهاردة) بيستوي ويبقى متاح تاني يوم T+1 بعد تأكيد التسليم وعدّي نافذة المشاكل.","صف «رسم التوصيل» في إعدادات المحل تحت الرصيد: بيعرض رسم توصيل محلك الحالي (النور: 30 ج في الديمو) وتقدر تعدّله بأزرار +/− — التعديل بيظهر فوراً للعملاء في كارت المحل وبيتطبق على الطلبات الجديدة، مع ملحوظة إن المنصة حاطة حد أقصى للرسم (50 ج). كل محل بيحدد رسمه بنفسه فالرسوم بتختلف من محل لمحل، والرسم بيوصلك كامل مع كل طلب توصيل.","زرار «اطلب تحويل» بيبعت InstaPay فوري على مدار الساعة — حتى الجمعة والسبت — والفلوس توصل في دقايق، مش آخر الأسبوع.","طلبات الكاش (COD) مش بتتحوّل أصلاً: فلوسها عند التاجر من لحظة التسليم، فبتتعمل مقاصّة — العمولة المستحقة عليها بتتخصم من مستحقات الدفع الأونلاين، وكتير من التجار صافي تحويلهم بيقل أو يبقى صفر."],rule:"قاعدة الـ24 ساعة: الرصيد يستوي T+1 والتحويل InstaPay فوري (رسم 0.1% بحد أقصى 20 ج). شرط التنفيذ الحاسم: بوابة الدفع لازم تسوّي للمنصة نفسها T+1 — لو البوابة أسبوعية (جدول Paymob القياسي) المنصة هتضطر تسلّف التاجر من رأس مالها، وعشان كده سرعة تسوية البوابة عامل حسم في الاختيار (Kashier بتعلن تسوية مرنة/فورية بالاتفاق). ولسه سارية مصفوفة الأخطاء: خطأ المحل على المحل، وخطأ المنصة علينا."}
   ]},
  admin:{label:"لوحة الإدارة",sub:"ويب · تشغيل المنصة",icon:"إ",type:"desktop",
   screens:[
    {id:"a-dash",n:"لوحة المؤشرات",who:"صورة المنصة اليوم",points:["طلبات اليوم وقيمة المبيعات ومتوسط السلة وزمن التوصيل الفعلي.","رسم الطلبات بالساعة بيكشف ذروة البقالة (قبل الغدا وبالليل).","تنبيهات تشغيلية: محلات متأخرة، أصناف نافدة كتير، شكاوى جودة."],rule:"أهداف تشغيلية معلنة: شكاوى جودة أقل من 1.5% — ومخصص خسائر 0.5% من المبيعات."},
-   {id:"a-orders",n:"طلبات حية + التوزيع",who:"قلب المنظومة",points:["كل طلب حي بحالته، وتفاصيل توزيعه على المحلات بضغطة واحدة.","الطلب المقسّم بيبان أجزاؤه وحالة كل جزء — والعميل مش حاسس بحاجة.","إعادة توزيع يدوية عند الضرورة مع تسجيل السبب في سجل التدقيق."],rule:"سقوط التقسيم: مندوب المحل الرئيسي ← رايدر مستقل للطلبات المقسمة ← توصيلتان بنفس الرسوم وإشعار استباقي."},
+   {id:"a-orders",n:"طلبات حية",who:"قلب المنظومة",points:["كل طلب حي بحالته والمحل اللي العميل اختاره بنفسه باين جنبه.","كل طلب من محل واحد من أوله لآخره — طلبات التوصيل بيوصلها كابتن نفس المحل، وطلبات الاستلام العميل بيستلمها بنفسه من المحل.","عمود «طريقة الاستلام» في الجدول بيوضّح كل طلب توصيل ولا استلام من المحل بشارة ملوّنة — وطلبات الاستلام من غير رسم توصيل.","أي تدخل يدوي من الإدارة بيتسجل سببه في سجل التدقيق."],rule:"نموذج المحلات أولاً: العميل بيختار المحل، والطلب بيتنفذ ويتوصل من نفس المحل."},
    {id:"a-stores",n:"المحلات",who:"إدارة الشركاء",points:["حالة كل محل: متصل، سكور تنفيذ، طلبات اليوم، ورصيده المتاح للتحويل (بيستوي T+1 ويتحوّل InstaPay على طلبه).","محل جديد بيبدأ بكتالوج المنصة ومخزون افتتاحي بيتدخل مع فريق الإلحاق.","إيقاف مؤقت لمحل من غير ما يأثر على طلبات شغالة عند غيره."],rule:"حالة التعاقد الحالية: لسه مفيش تاجر متعاقد — أول تاجر متعاقد كتالوجه هو كتالوج الإطلاق."},
    {id:"a-catalog",n:"الكتالوج الرئيسي",who:"أصل البيانات",points:["منتج واحد موحّد بالباركود، مرتبط بالبراند والشركة المنتجة.","سجل أسعار تاريخي ونسب نفاد — دي البيانات اللي قيمتها بتكبر مع الحجم.","جودة البحث والصور والمطابقة مسؤولية فريق البيانات (حمدي)."],rule:"قيمة مستقبلية: رؤى مجمعة ومجهولة للمنتجين (Sell-Out) — بيانات العملاء الشخصية لا تُباع أبداً، قانون 151/2020."}
   ]}
 };
 
 /* ================= STATE ================= */
-var state={app:"customer",screen:"c-home",cart:{1:1,3:2},pay:"card",sub:"replace",picked:{},inv:{1:24,3:40,5:12,8:9},share:60,adminScr:"a-dash",cat:"الكل",timer:54,payoutDone:false};
+var state={app:"customer",screen:"c-home",store:1,cartStore:1,storeCat:"الكل",conflict:null,cart:{1:1,3:2},pay:"card",fulfillment:"delivery",mMethod:"delivery",sub:"replace",picked:{},inv:{1:24,3:40,5:12,8:9},share:60,adminScr:"a-dash",cat:"الكل",timer:54,payoutDone:false,promoOn:false,promoErr:"",wallet:50,useWallet:true,addresses:[{name:"البيت",area:"سموحة",detail:"شارع النصر، عمارة 12، الدور 3، شقة 7",phone:"0100 000 0000",def:true},{name:"الشغل",area:"سيدي جابر",detail:"شارع المشير أحمد إسماعيل، برج النخيل، الدور 5",phone:"0100 000 0000",def:false}],addrForm:false,addrName:"بيت",addrPin:false,faq:-1,prep:{},manualOpen:null,scanFx:null,cam:null,deliveryNote:"",rateStars:0,rateComment:"",rated:null,delivDone:false};
 function prod(id){return PRODUCTS.find(function(p){return p.id===id})}
 function cartCount(){var n=0;for(var k in state.cart)n+=state.cart[k];return n}
-function cartTotal(){var t=0;for(var k in state.cart)t+=prod(+k).price*state.cart[k];return t}
+function cartTotal(){var t=0;for(var k in state.cart)t+=storePrice(state.cartStore,prod(+k))*state.cart[k];return t}
 function toast(msg){var t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove("show")},2200)}
 function money(n){return n+" ج"}
 
 /* ================= PRODUCT CARD ================= */
-function qtyCtl(id){
- var q=state.cart[id]||0;
- if(!q)return '<button class="addbtn" onclick="setQty('+id+',1)">أضف +</button>';
- return '<div class="qty"><button onclick="setQty('+id+','+(q+1)+')">+</button><b>'+q+'</b><button class="minus" onclick="setQty('+id+','+(q-1)+')">−</button></div>';
+function qtyCtl(id,storeId){
+ var q=state.cart[id]||0; var sc=storeId?","+storeId:"";
+ if(!q)return '<button class="addbtn" onclick="setQty('+id+',1'+sc+')">أضف +</button>';
+ return '<div class="qty"><button onclick="setQty('+id+','+(q+1)+sc+')">+</button><b>'+q+'</b><button class="minus" onclick="setQty('+id+','+(q-1)+sc+')">−</button></div>';
 }
-function pcard(p){
- return '<div class="pcard">'+(p.old?'<span class="off-badge">وفّر '+(p.old-p.price)+' ج</span>':'')+
+function pcard(p,storeId){
+ var price=storeId?storePrice(storeId,p):p.price;
+ var old=p.old?(storeId?p.old+(price-p.price):p.old):0;
+ return '<div class="pcard">'+(old?'<span class="off-badge">وفّر '+(old-price)+' ج</span>':'')+
  '<div class="img" style="background:'+p.bg+'"><span class="brandmark">'+p.emoji+'</span>'+(p.brand!=="—"?p.brand:"من السوق")+'</div>'+
  '<h5 onclick="go(\'c-prod\')" style="cursor:pointer">'+p.name+'</h5><div class="unit">'+p.unit+'</div>'+
- '<div class="row"><div class="price">'+p.price+' ج '+(p.old?'<span class="old">'+p.old+' ج</span>':'')+'</div>'+qtyCtl(p.id)+'</div></div>';
+ '<div class="row"><div class="price">'+price+' ج '+(old?'<span class="old">'+old+' ج</span>':'')+'</div>'+qtyCtl(p.id,storeId)+'</div></div>';
 }
 function statusbar(){return '<div class="statusbar"><span>9:41</span><span class="dots">●●●○ ▰▰▰▱</span></div>'}
 var IC={
@@ -611,7 +757,7 @@ function custNav(active){
  var c=cartCount();
  return '<div class="bottomnav">'+
  '<button class="'+(active==="home"?"on":"")+'" onclick="go(\'c-home\')"><span class="bi">'+IC.home+'</span>الرئيسية</button>'+
- '<button class="'+(active==="cat"?"on":"")+'" onclick="go(\'c-cat\')"><span class="bi">'+IC.grid+'</span>الأقسام</button>'+
+ '<button class="'+(active==="cat"?"on":"")+'" onclick="go(\'c-store\')"><span class="bi">'+IC.grid+'</span>الأقسام</button>'+
  '<button class="'+(active==="cart"?"on":"")+'" onclick="go(\'c-cart\')"><span class="bi">'+IC.cart+'</span>السلة'+(c?'<span class="cart-count">'+c+'</span>':"")+'</button>'+
  '<button class="'+(active==="orders"?"on":"")+'" onclick="go(\'c-orders\')"><span class="bi">'+IC.box+'</span>طلباتي</button>'+
  '<button class="'+(active==="me"?"on":"")+'" onclick="go(\'c-orders\')"><span class="bi">'+IC.user+'</span>حسابي</button></div>';
@@ -620,92 +766,230 @@ function merchNav(active){
  return '<div class="bottomnav">'+
  '<button class="'+(active==="home"?"on":"")+'" onclick="go(\'m-home\')"><span class="bi">'+IC.home+'</span>اليوم</button>'+
  '<button class="'+(active==="orders"?"on":"")+'" onclick="go(\'m-orders\')"><span class="bi">'+IC.bell+'</span>الطلبات<span class="cart-count">2</span></button>'+
+ '<button class="'+(active==="delivery"?"on":"")+'" onclick="go(\'m-delivery\')"><span class="bi" style="font-size:21px">🚴</span>التوصيل</button>'+
  '<button class="'+(active==="inv"?"on":"")+'" onclick="go(\'m-inv\')"><span class="bi">'+IC.box+'</span>مخزوني</button>'+
  '<button class="'+(active==="settle"?"on":"")+'" onclick="go(\'m-settle\')"><span class="bi">'+IC.wallet+'</span>رصيدي</button></div>';
 }
 
 /* ================= CUSTOMER SCREENS ================= */
+function storeCard(st){
+ return '<div class="store-card'+(st.open?"":" closed")+'" '+(st.open?'onclick="openStore('+st.id+')"':'onclick="toast(\'المحل ده مغلق دلوقتي — مواعيده '+st.hours+'\')"')+'>'+
+ '<div class="store-logo" style="background:'+st.bg+'">'+st.emoji+'</div>'+
+ '<div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><b style="font-size:16.5px">'+st.name+'</b><span class="status-pill '+(st.open?"st-done":"st-late")+'">'+(st.open?"● مفتوح":"● مغلق")+'</span></div>'+
+ '<div style="font-size:13px;color:var(--muted)">'+st.type+' · '+st.addr+'</div>'+
+ '<div class="store-meta"><span>⭐ '+st.rating+' ('+st.rc+' تقييم)</span><span>📍 '+st.dist+'</span><span>🕐 '+st.eta+'</span><span>🚴 رسم التوصيل '+money(st.fee)+'</span></div>'+
+ (st.open?'<div style="font-size:12.5px;color:var(--pen);font-weight:800;margin-top:2px">دوس عشان تدخل المحل وتطلب منه ←</div>':'<div style="font-size:12.5px;color:var(--muted);font-weight:700;margin-top:2px">بيفتح '+st.hours+'</div>')+'</div></div>';
+}
 function sHome(){
- var offers=PRODUCTS.filter(function(p){return p.old});
+ var defA=state.addresses.filter(function(a){return a.def})[0]||state.addresses[0];
  return statusbar()+'<div class="scr-body">'+
- '<div class="p-head"><div class="loc">التوصيل إلى<b>📍 سموحة — شارع النصر</b></div><div class="avatar">م</div></div>'+
- '<div class="search"><span>🔍</span><input placeholder="دوّر على لبن، طماطم، عيش…"><span>🎙️</span></div>'+
- '<div style="background:var(--green-soft);border:1.6px dashed var(--green-d);border-radius:12px 4px 13px 5px;padding:9px 12px;margin:2px 0 6px;font-weight:800;font-size:14px;color:var(--green-d)">⚡ توصيل سريع من أقرب محل جنبك — طلبك بيتحضّر من رف المحل اللي حواليك</div>'+
- '<div class="cats">'+CATS.map(function(c){return '<div class="cat" onclick="go(\'c-cat\')"><span class="ci" style="background:'+c[2]+'">'+c[0]+'</span>'+c[1]+'</div>'}).join("")+'</div>'+
- '<div class="offer"><span class="tag">حتى −20%</span><b>عروض الويك إند</b><span>خصومات على الألبان والمخبوزات — بنفس سعر المحل</span></div>'+
- '<div class="sec-t"><h4>عروض النهاردة — من الرف على طول</h4><a href="#" onclick="go(\'c-cat\');return false">شوف الكل</a></div>'+
- '<div class="pgrid">'+offers.slice(0,4).map(pcard).join("")+'</div>'+
- '<div class="sec-t"><h4>الأكثر طلباً في سموحة</h4><a href="#" onclick="go(\'c-cat\');return false">شوف الكل</a></div>'+
- '<div class="pgrid">'+PRODUCTS.slice(4,8).map(pcard).join("")+'</div>'+
- '<div style="height:8px"></div></div>'+custNav("home");
+ '<div class="p-head"><div class="loc" onclick="go(\'c-addresses\')" style="cursor:pointer" title="دوس عشان تغيّر أو تضيف عنوان">التوصيل إلى — دوس لتغيير العنوان<b>📍 '+defA.area+' — '+defA.detail.split("،")[0]+'</b></div><div class="avatar">م</div></div>'+
+ '<div class="search"><span>🔍</span><input placeholder="دوّر على محل أو منتج…"><span>🎙️</span></div>'+
+ '<div class="offer"><span class="tag">حتى −20%</span><b>عروض الويك إند</b><span>خصومات على الألبان والمخبوزات — في محلات مختارة قريبة منك</span></div>'+
+ '<div class="sec-t"><h4>محلات قريبة منك</h4><span style="font-size:13px;color:var(--muted);font-weight:700">اختار محلك واطلب منه</span></div>'+
+ '<p class="note-sm" style="margin:-4px 0 10px">الترتيب: الأقرب ليك أولاً — ولو محلين على نفس البعد، الأعلى تقييماً بييجي الأول ⭐</p>'+
+ STORES.slice().sort(function(a,b){var d=parseFloat(a.dist)-parseFloat(b.dist);if(Math.abs(d)>0.001)return d;var r=parseFloat(b.rating)-parseFloat(a.rating);if(r!==0)return r;return b.rc-a.rc}).map(storeCard).join("")+
+ '<p class="note-sm">كل محل ليه منتجاته وأسعاره — طلبك بييجي من المحل اللي اخترته بس، وسلتك مرتبطة بمحل واحد.</p></div>'+custNav("home");
+}
+function sStore(){
+ var st=storeById(state.store);
+ var list=PRODUCTS.filter(function(p){return STORE_STOCK[st.id].indexOf(p.id)>=0&&(state.storeCat==="الكل"||p.cat===state.storeCat||(state.storeCat==="عروض"&&p.old))});
+ var chips=["الكل","عروض"].concat(CATS.map(function(c){return c[1]}));
+ var cards=list.map(function(p){return pcard(p,st.id)});
+ return statusbar()+'<div class="scr-body">'+
+ '<button class="btn-ghost" style="width:auto;padding:8px 18px" onclick="go(\'c-home\')">→ كل المحلات</button>'+
+ '<div class="store-head"><div class="store-logo big" style="background:'+st.bg+'">'+st.emoji+'</div><div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><b style="font-size:19px">'+st.name+'</b><span class="status-pill '+(st.open?"st-done":"st-late")+'">'+(st.open?"● مفتوح":"● مغلق")+'</span></div>'+
+ '<div style="font-size:13.5px;color:var(--muted)">'+st.type+' · ⭐ '+st.rating+' ('+st.rc+' تقييم) · 📍 '+st.dist+' منك · 🕐 يوصل في '+st.eta+'</div>'+
+ '<div style="font-size:13.5px;color:var(--muted)">📌 '+st.addr+'<br>🕐 ساعات العمل: '+st.hours+'<br>🚴 رسم التوصيل: '+money(st.fee)+' — بيحدده '+st.name+' بنفسه، فبيختلف من محل لمحل</div></div></div>'+
+ '<div class="chips">'+chips.map(function(c){return '<button class="chip '+(state.storeCat===c?"on":"")+'" onclick="setStoreCat(\''+c+'\')">'+c+'</button>'}).join("")+'</div>'+
+ (list.length?'<div class="pgrid">'+cards.join("")+'</div>':'<div class="empty"><span class="e">🧺</span>مفيش منتجات في القسم ده عند '+st.name+' دلوقتي</div>')+
+ '<p class="note-sm">الأسعار دي أسعار '+st.name+' نفسه — والمنتجات الظاهرة هي المتاحة فعلياً عنده بس.</p></div>'+custNav("cat");
 }
 function sCat(){
  var list=PRODUCTS.filter(function(p){return state.cat==="الكل"||p.cat===state.cat||(state.cat==="عروض"&&p.old)||(state.cat==="بالوزن"&&p.weight)});
  var chips=["الكل","عروض","بالوزن"].concat(CATS.map(function(c){return c[1]}));
+ var cards=list.map(pcard);
  return statusbar()+'<div class="scr-body">'+
  '<div class="p-head"><div class="loc">القسم<b>'+(state.cat==="الكل"?"كل المنتجات":state.cat)+'</b></div><div class="avatar">🛒</div></div>'+
  '<div class="search"><span>🔍</span><input placeholder="دوّر جوه القسم…"></div>'+
  '<div class="chips">'+chips.map(function(c){return '<button class="chip '+(state.cat===c?"on":"")+'" onclick="setCat(\''+c+'\')">'+c+'</button>'}).join("")+'</div>'+
- (list.length?'<div class="pgrid">'+list.map(pcard).join("")+'</div>':'<div class="empty"><span class="e">🧺</span>مفيش منتجات هنا دلوقتي</div>')+
+ (list.length?'<div class="pgrid">'+cards.join("")+'</div>':'<div class="empty"><span class="e">🧺</span>مفيش منتجات هنا دلوقتي</div>')+
  '<p class="note-sm">المنتجات الظاهرة هي المتاحة فعلياً بس — اللي بيخلص بيختفي فوراً.</p></div>'+custNav("cat");
 }
 function sProd(){
  var p=PRODUCTS[2];
  return statusbar()+'<div class="scr-body">'+
- '<button class="btn-ghost" style="width:auto;padding:8px 18px" onclick="go(\'c-cat\')">→ رجوع</button>'+
+ '<button class="btn-ghost" style="width:auto;padding:8px 18px" onclick="go(\'c-store\')">→ رجوع للمحل</button>'+
  '<div style="height:190px;border-radius:10px 4px 11px 5px;border:1.6px dashed rgba(32,36,31,.3);background:'+p.bg+';display:grid;place-items:center;margin:12px 0"><span style="text-align:center"><span style="display:block;font-size:84px;line-height:1.1">'+p.emoji+'</span><span style="font-family:\'Marhey\',cursive;font-size:15px;color:rgba(32,36,31,.65)">صورة المنتج بتتصوّر من الرف نفسه قبل الإطلاق</span></span></div>'+
  '<h3 style="margin:0;font-size:21px;font-weight:900">'+p.name+'</h3>'+
  '<div style="color:var(--muted);font-size:14px">'+p.unit+' · بيتباع بالوزن</div>'+
- '<div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0"><div class="price" style="font-size:24px">'+p.price+' ج <small>/ 500 جم</small></div>'+qtyCtl(p.id)+'</div>'+
+ '<div style="font-size:13.5px;font-weight:800;color:var(--green-d);margin-top:4px">من 🏪 '+storeById(state.store).name+' — بسعر المحل ده</div>'+
+ '<div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0"><div class="price" style="font-size:24px">'+storePrice(state.store,p)+' ج <small>/ 500 جم</small></div>'+qtyCtl(p.id,state.store)+'</div>'+
  '<div class="sum"><div class="r"><span>⚖️ سماحية الوزن</span><b>±10%</b></div><div class="r"><span>الفرق بيتحاسب تلقائياً قبل الدفع النهائي وبيبان في الفاتورة</span></div></div>'+
  '<h4 style="margin:16px 0 8px">لو الصنف خلص أثناء التحضير؟</h4>'+
  [["replace","بدّله ببديل مشابه بنفس السعر تقريباً"],["refund","الغِ الصنف واسترد تمنه"],["call","كلّمني قبل ما تقرر"]].map(function(o){
    return '<button class="radio-card '+(state.sub===o[0]?"on":"")+'" onclick="setSub(\''+o[0]+'\')"><span class="rd"></span><span><b>'+o[1]+'</b></span></button>'}).join("")+
- '<div class="sec-t"><h4>ناس بتاخد معاه</h4></div><div class="pgrid">'+[PRODUCTS[11],PRODUCTS[8]].map(pcard).join("")+'</div></div>'+
+ '<div class="sec-t"><h4>ناس بتاخد معاه — من نفس المحل</h4></div><div class="pgrid">'+[PRODUCTS[11],PRODUCTS[8]].map(function(x){return pcard(x,state.store)}).join("")+'</div></div>'+
  '<div class="cta-bar"><button class="btn-main" onclick="go(\'c-cart\')"><span>روح للسلة</span><span>'+money(cartTotal())+'</span></button></div>';
 }
 function sCart(){
  var ids=Object.keys(state.cart);
- var body=ids.length? ids.map(function(k){var p=prod(+k);return '<div class="line-item"><div class="img" style="background:'+p.bg+'">'+p.emoji+'</div><div style="flex:1"><h5>'+p.name+'</h5><div class="u">'+p.unit+'</div><div class="price">'+(p.price*state.cart[k])+' ج</div></div>'+qtyCtl(p.id)+'</div>'}).join("")
+ var body=ids.length? ids.map(function(k){var p=prod(+k);return '<div class="line-item"><div class="img" style="background:'+p.bg+'">'+p.emoji+'</div><div style="flex:1"><h5>'+p.name+'</h5><div class="u">'+p.unit+'</div><div class="price">'+(storePrice(state.cartStore,p)*state.cart[k])+' ج</div></div>'+qtyCtl(p.id)+'</div>'}).join("")
   :'<div class="empty"><span class="e">🛒</span>سلتك فاضية<br><button class="addbtn" style="margin-top:12px" onclick="go(\'c-home\')">ابدأ التسوق</button></div>';
- var t=cartTotal(), fee=30, grand=t+fee;
- return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 12px;font-size:20px;font-weight:900">سلة التسوق</h3>'+
+ var t=cartTotal(), fee=storeById(state.cartStore).fee, grand=t+fee;
+ return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 4px;font-size:20px;font-weight:900">سلة التسوق</h3>'+
+ '<div class="addr" style="margin-bottom:12px"><span style="font-size:22px">🏪</span><div style="flex:1"><b>طلبك من: '+storeById(state.cartStore).name+'</b><span>السلة مرتبطة بمحل واحد — '+storeById(state.cartStore).addr+' · يوصل في '+storeById(state.cartStore).eta+'</span></div></div>'+
  body+
  (ids.length? '<h4 style="margin:14px 0 8px">لو صنف خلص أثناء التحضير؟</h4><div class="seg">'+[["replace","بديل مشابه"],["refund","استرداد"],["call","كلّمني"]].map(function(o){return '<button class="'+(state.sub===o[0]?"on":"")+'" onclick="setSub(\''+o[0]+'\')">'+o[1]+'</button>'}).join("")+'</div>'+
  '<div class="sum"><div class="r"><span>إجمالي المنتجات</span><span>'+money(t)+'</span></div>'+
- '<div class="r"><span>التوصيل والخدمة</span><span>'+money(fee)+'</span></div>'+
+ '<div class="r"><span>توصيل ('+storeById(state.cartStore).name+')</span><span>'+money(fee)+'</span></div>'+
  '<div class="r total"><span>الإجمالي</span><span>'+money(grand)+'</span></div></div>'+
- '<p class="note-sm">مفيش حد أدنى للطلب — اطلب صنف واحد لو عايز، وطلبك هيكمل عادي. رسوم التوصيل والخدمة ثابتة على كل طلب.</p>':"")+
+ '<p class="note-sm">مفيش حد أدنى للطلب — اطلب صنف واحد لو عايز، وطلبك هيكمل عادي. رسم التوصيل اللي فوق ده رسم '+storeById(state.cartStore).name+' نفسه — كل محل بيحدد رسمه بنفسه فبيختلف من محل لمحل — ولو هتستلم من المحل بنفسك، اختار «استلام من المحل» في شاشة الدفع ووفّر الـ'+fee+' ج.</p>':"")+
  '</div>'+(ids.length?'<div class="cta-bar"><button class="btn-main" onclick="go(\'c-pay\')"><span>إتمام الطلب</span><span>'+money(grand)+'</span></button></div>':"")+custNav("cart");
 }
 function sPay(){
- var t=cartTotal(), fee=30, grand=t+fee;
- var opts=[["card","💳 كارت بنكي","دفع آمن عبر بوابة الدفع — بيانات كارتك مش بتتخزن عندنا"],["wallet","📱 محفظة موبايل","فودافون كاش / أورانج / اتصالات كاش"],["insta","⚡ InstaPay","تحويل فوري بيتربط بطلبك تلقائياً"],["cod","💵 كاش عند الاستلام","الدفع نفسه هو تأكيد الاستلام — من غير أي كود"]];
+ var st=storeById(state.cartStore);
+ var isPickup=state.fulfillment==="pickup";
+ var t=cartTotal(), fee=isPickup?0:st.fee;
+ var disc=state.promoOn?Math.round(t*0.10):0;
+ var grand=t-disc+fee;
+ var defA=state.addresses.filter(function(a){return a.def})[0]||state.addresses[0];
+ var wUse=state.useWallet?Math.min(state.wallet,grand):0;
+ var rem=grand-wUse;
+ var restOpts=[["card","💳 كارت أونلاين","دفع آمن عبر بوابة الدفع — بيانات كارتك مش بتتخزن عندنا"],["cash","💵 كاش",isPickup?"تدفعه للمحل وانت بتستلم طلبك بنفسك":"تدفعه للكابتن عند الاستلام من الباب — الدفع نفسه هو تأكيد الاستلام، من غير أي كود"]];
+ var promo=state.promoOn
+  ? '<div class="promo-ok"><span>🎟️ اتطبق كود <b dir="ltr">WELCOME10</b> — خصم 10% على المنتجات (وفّرت '+money(disc)+')</span><button onclick="removePromo()">✕ إلغاء</button></div>'
+  : '<div class="promo-row"><input id="promoIn" placeholder="اكتب الكود هنا — جرّب WELCOME10" autocomplete="off"><button class="addbtn" onclick="applyPromo()">تطبيق</button></div>'+(state.promoErr?'<div class="promo-err">⚠️ '+state.promoErr+'</div>':"");
  return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 12px;font-size:20px;font-weight:900">الدفع والتوصيل</h3>'+
- '<div class="addr"><span style="font-size:22px">📍</span><div><b>البيت — سموحة</b><span>شارع النصر، عمارة 12، الدور 3، شقة 7 · 0100 000 0000</span></div></div>'+
- '<h4 style="margin:6px 0 10px">هتدفع ازاي؟</h4>'+
- opts.map(function(o){return '<button class="radio-card '+(state.pay===o[0]?"on":"")+'" onclick="setPay(\''+o[0]+'\')"><span class="rd"></span><span><b>'+o[1]+'</b><span>'+o[2]+'</span></span></button>'}).join("")+
- '<div class="sum"><div class="r"><span>إجمالي المنتجات</span><span>'+money(t)+'</span></div><div class="r"><span>التوصيل والخدمة</span><span>'+money(fee)+'</span></div><div class="r total"><span>الإجمالي النهائي</span><span>'+money(grand)+'</span></div></div>'+
+ '<div class="addr"><span style="font-size:22px">📍</span><div style="flex:1"><b>'+defA.name+' — '+defA.area+'</b><span>'+defA.detail+' · '+defA.phone+'</span></div><button class="mini-btn" onclick="go(\'c-addresses\')">تغيير</button></div>'+
+ '<div class="addr"><span style="font-size:22px">🏪</span><div style="flex:1"><b>الطلب من: '+storeById(state.cartStore).name+'</b><span>'+storeById(state.cartStore).type+' · '+storeById(state.cartStore).addr+'</span></div></div>'+
+ '<h4 style="margin:14px 0 8px">طريقة الاستلام</h4>'+
+ '<button class="radio-card '+(!isPickup?"on":"")+'" onclick="setFulfillment(\'delivery\')"><span class="rd"></span><span><b>🚴 توصيل لباب البيت</b><span>كابتن المحل يوصّل لعنوانك — رسم توصيل '+st.name+': '+money(st.fee)+'</span></span></button>'+
+ '<button class="radio-card '+(isPickup?"on":"")+'" onclick="setFulfillment(\'pickup\')"><span class="rd"></span><span><b>🏪 استلام من المحل</b><span>تستلم طلبك بنفسك من '+st.name+' — بدون رسم توصيل خالص</span></span></button>'+
+ (isPickup?'<div class="addr" style="border:2px solid var(--ink2);background:#FDFBF2"><span style="font-size:22px">🏪</span><div style="flex:1"><b>هتستلم من: '+st.name+'</b><span>📌 '+st.addr+'<br>🕐 ساعات العمل: '+st.hours+'<br>وري رقم طلبك للمحل وانت بتستلم — مفيش أي كود استلام إضافي</span></div></div>':
+ '<h4 style="margin:14px 0 8px">📝 تعليمات التوصيل (اختياري)</h4><textarea class="txt-in" rows="2" placeholder="مثال: ارن الجرس ومتخبطش" oninput="setDeliveryNote(this.value)">'+escHtml(state.deliveryNote)+'</textarea><p class="note-sm" style="margin:-4px 0 4px">اكتب أي حاجة تساعد المندوب يوصلك أسرع — هتظهر له مظللة وواضحة في صفحة التوصيل عند التاجر، زي ما كتبتها بالحرف. سيبها فاضية لو مش محتاج.</p>')+
+ '<h4 style="margin:14px 0 8px">🎟️ عندك كود خصم؟</h4>'+promo+
+ '<h4 style="margin:16px 0 10px">الدفع</h4>'+
+ '<button class="wtoggle '+(state.useWallet?"on":"")+'" onclick="toggleWallet()"><span style="flex:1;min-width:0"><b>👛 استخدم رصيد محفظتي ('+money(state.wallet)+')</b><span>'+(state.useWallet?('المحفظة بتتطبق الأول: هيتخصم '+money(wUse)+' من رصيدك قبل أي طريقة تانية'):'المحفظة مش مفعّلة — المستحق كله هيتدفع بطريقة واحدة')+'</span></span><span class="sw"></span></button>'+
+ (rem>0
+  ? '<h4 style="margin:14px 0 8px">الباقي: '+money(rem)+' — تدفعه ازاي؟</h4>'+restOpts.map(function(o){return '<button class="radio-card '+(state.pay===o[0]?"on":"")+'" onclick="setPay(\''+o[0]+'\')"><span class="rd"></span><span><b>'+o[1]+'</b><span>'+o[2]+'</span></span></button>'}).join("")
+  : '<p class="covered-note">🎉 المحفظة غطّت طلبك بالكامل — مش هتدفع حاجة تانية.</p>')+
+ '<div class="sum"><div class="r"><span>إجمالي المنتجات</span><span>'+money(t)+'</span></div>'+
+ (disc?'<div class="r"><span>خصم الكود (WELCOME10)</span><span style="color:var(--green);font-weight:800">− '+money(disc)+'</span></div>':"")+
+ (isPickup?'<div class="r"><span>استلام من المحل — بدون رسم</span><span style="color:var(--green);font-weight:800">0 ج</span></div>':'<div class="r"><span>توصيل ('+st.name+')</span><span>'+money(fee)+'</span></div>')+
+ (wUse?'<div class="r"><span>من المحفظة</span><span style="color:var(--green);font-weight:800">− '+money(wUse)+'</span></div>':"")+
+ '<div class="r total"><span>'+(rem>0?('الباقي ('+(state.pay==="card"?"كارت أونلاين":"كاش")+')'):'الباقي')+'</span><span>'+money(rem)+'</span></div></div>'+
  '<p class="note-sm">بالدفع الأونلاين مفيش كود استلام — ادفع وخلاص، وهنبعتلك إشعار بكل خطوة في طلبك.</p></div>'+
- '<div class="cta-bar"><button class="btn-main" onclick="orderDone()"><span>أكّد الطلب</span><span>'+money(grand)+'</span></button></div>';
+ '<div class="cta-bar"><button class="btn-main" onclick="orderDone()"><span>'+(rem===0?"أكّد الطلب — متغطي بالكامل من المحفظة":(isPickup?"أكّد الطلب — استلام من المحل":(wUse>0?("أكّد الطلب — ادفع الباقي "+(state.pay==="card"?"بالكارت أونلاين":"كاش")):"أكّد الطلب")))+'</span><span>'+money(rem)+'</span></button></div>';
 }
 function sTrack(){
+ if(state.fulfillment==="pickup"){
+  var st=storeById(state.cartStore);
+  return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 4px;font-size:20px;font-weight:900">استلام من المحل 🏪</h3>'+
+  '<p style="color:var(--muted);margin:0 0 12px;font-size:14px">طلبك بيتحضّر في '+st.name+' — هنبعتلك إشعار أول ما يجهز، وتعالى استلمه بنفسك من غير رسم توصيل.</p>'+
+  '<div style="background:#FFFDF4;border:2px solid var(--ink2);border-radius:8px 18px 7px 16px;box-shadow:var(--hard-sm);padding:16px;text-align:center;margin-bottom:12px"><div style="font-size:13.5px;font-weight:800;color:var(--muted)">رقم طلبك — وريه للمحل وانت بتستلم</div><div style="font-family:\'IBM Plex Mono\',monospace;font-size:46px;font-weight:700;line-height:1.25;color:var(--green-d)">#1042</div><div style="font-size:13px;color:var(--muted)">رقم الطلب نفسه هو إثبات الاستلام — مفيش كود استلام إضافي</div></div>'+
+  '<div class="addr"><span style="font-size:22px">🏪</span><div style="flex:1"><b>جاهز للاستلام من: '+st.name+'</b><span>📌 '+st.addr+'<br>🕐 ساعات العمل: '+st.hours+'</span></div></div>'+
+  '<div class="timeline" style="margin-top:14px">'+
+  '<div class="tl done"><span class="dot">✓</span><div><b>استلمنا طلبك</b><span>12:02 ظهراً</span></div></div>'+
+  '<div class="tl done"><span class="dot">✓</span><div><b>المحل قبِل وبيحضّر طلبك</b><span>التجهيز شغال دلوقتي في '+st.name+'</span></div></div>'+
+  '<div class="tl now"><span class="dot">🏪</span><div><b>جاهز للاستلام من '+st.name+'</b><span>الشنطة جاهزة عند الكاشير — وري رقم طلبك #1042 واستلم على طول</span></div></div></div>'+
+  '<button class="btn-ghost" onclick="toast(\'اتفتحت محادثة مع الدعم — مسعود وفريقه بيردوا في دقائق\')">💬 محتاج مساعدة؟ كلم الدعم</button></div>'+custNav("orders");
+ }
  return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 4px;font-size:20px;font-weight:900">طلبك في الطريق 🚴</h3>'+
+ '<div class="addr" style="margin-bottom:10px"><span style="font-size:22px">🏪</span><div style="flex:1"><b>من: '+storeById(state.cartStore).name+'</b><span>كابتن المحل: أحمد سامي — هو اللي بيوصّل طلبك 🚴</span></div></div>'+
  '<p style="color:var(--muted);margin:0 0 12px;font-size:14px">طلب #1042 · الوصول المتوقع <b style="color:var(--green-d)">12:12 ظهراً</b> (كمان ~4 دقايق)</p>'+
  '<div class="mapbox"><svg viewBox="0 0 340 170" preserveAspectRatio="none"><path d="M0 120 C80 100 120 140 200 110 S320 60 340 70" stroke="#fff" stroke-width="14" fill="none"/><path d="M40 0 C60 60 50 120 70 170" stroke="#fff" stroke-width="10" fill="none"/><path d="M0 120 C80 100 120 140 200 110 S320 60 340 70" stroke="#16A34A" stroke-width="3.5" stroke-dasharray="8 6" fill="none"/></svg><span class="map-pin" style="top:52px;inset-inline-start:36px">🏠 بيتك</span><span class="map-pin" style="bottom:26px;inset-inline-end:30px;background:var(--amber);color:#451A03">🚴 المندوب</span></div>'+
  '<div class="timeline" style="margin-top:16px">'+
  '<div class="tl done"><span class="dot">✓</span><div><b>استلمنا طلبك</b><span>12:02 ظهراً</span></div></div>'+
  '<div class="tl done"><span class="dot">✓</span><div><b>المحل قبِل وبيحضّر</b><span>اتحضر في 3 دقايق</span></div></div>'+
- '<div class="tl now"><span class="dot">🚴</span><div><b>المندوب في الطريق إليك</b><span>خرج 12:05 — الدفع تم أونلاين، مفيش كود استلام</span></div></div>'+
+ '<div class="tl now"><span class="dot">🚴</span><div><b>كابتن المحل في الطريق إليك</b><span>أحمد سامي · خرج 12:05 — الدفع تم أونلاين، مفيش كود استلام</span></div></div>'+
  '<div class="tl"><span class="dot"></span><div><b>التسليم</b><span>هيوصلك إشعار أول ما يوصل</span></div></div></div>'+
+ '<div class="sec-t"><h4>طلبك اللي فات من نفس المحل اتسلم</h4></div>'+ratingWidget()+
  '<button class="btn-ghost" onclick="toast(\'اتفتحت محادثة مع الدعم — مسعود وفريقه بيردوا في دقائق\')">💬 محتاج مساعدة؟ كلم الدعم</button></div>'+custNav("orders");
 }
 function sOrders(){
  return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 12px;font-size:20px;font-weight:900">طلباتي</h3>'+
- '<div class="order-card"><div class="top"><b>طلب #1042</b><span class="status-pill st-way">في الطريق</span></div><div class="items">لبن جهينة ×1 · طماطم 1 كجم · عيش فينو ×1</div><div class="top"><span style="font-weight:900;color:var(--green-d)">164 ج</span><button class="addbtn" onclick="go(\'c-track\')">تتبع الطلب</button></div></div>'+
- '<div class="order-card"><div class="top"><b>طلب #1031</b><span class="status-pill st-done">اتسلم</span></div><div class="items">بيض بلدي ×1 · أرز الضحى ×2 · سكر ×1</div><div class="top"><span style="font-weight:900;color:var(--green-d)">180 ج</span><button class="addbtn" onclick="reorder()">↺ اطلبها تاني</button></div></div>'+
+ '<div class="order-card"><div class="top"><b>طلب #1042</b><span class="status-pill st-way">في الطريق</span></div><div class="items">من سوبر ماركت النور · لبن جهينة ×1 · طماطم 1 كجم · عيش فينو ×1</div><div class="top"><span style="font-weight:900;color:var(--green-d)">164 ج</span><button class="addbtn" onclick="go(\'c-track\')">تتبع الطلب</button></div></div>'+
+ '<div class="order-card"><div class="top"><b>طلب #1031</b><span class="status-pill st-done">اتسلم</span></div><div class="items">من سوبر ماركت النور · بيض بلدي ×1 · أرز الضحى ×2 · سكر ×1</div><div class="top"><span style="font-weight:900;color:var(--green-d)">180 ج</span><button class="addbtn" onclick="reorder()">↺ اطلبها تاني</button></div></div>'+
+ ratingWidget()+
  '<div class="order-card"><div class="top"><b>طلب #1018</b><span class="status-pill st-done">اتسلم</span></div><div class="items">صدور فراخ 1 كجم · خيار 500 جم · زبادي ×1</div><div class="top"><span style="font-weight:900;color:var(--green-d)">232 ج</span><button class="addbtn" onclick="reorder()">↺ اطلبها تاني</button></div></div>'+
- '<div class="sum"><div class="r"><span>👤 محمد المصري</span><b>سموحة</b></div><div class="r"><span>📍 عناويني</span><span>2 عنوان</span></div><div class="r"><span>↩️ المرتجعات والاسترداد</span><span>مفيش طلبات مفتوحة</span></div></div></div>'+custNav("orders");
+ '<div class="sec-t"><h4>حسابي — محمد المصري · سموحة</h4></div>'+
+ '<div class="wallet-card"><div class="wc-top"><span>👛 محفظتي</span><b>'+money(state.wallet)+'</b></div><p>الاستردادات والمبالغ المستحقة بتنزل هنا، وتقدر تدفع بيها في طلباتك.</p></div>'+
+ '<button class="menu-row" onclick="toast(\'رصيد محفظتك '+money(state.wallet)+' — هتلاقيه كوسيلة دفع في شاشة الدفع 👛\')"><span>👛 محفظتي</span><span class="mr-v">'+money(state.wallet)+'</span><span class="mr-a">‹</span></button>'+
+ '<button class="menu-row" onclick="go(\'c-addresses\')"><span>📍 عناويني</span><span class="mr-v">'+state.addresses.length+' محفوظة</span><span class="mr-a">‹</span></button>'+
+ '<button class="menu-row" onclick="go(\'c-help\')"><span>🎧 المساعدة والدعم</span><span class="mr-a">‹</span></button>'+
+ '<div class="menu-row static"><span>↩️ المرتجعات والاسترداد</span><span class="mr-v">مفيش طلبات مفتوحة</span></div>'+
+ '</div>'+custNav("orders");
+}
+
+function sAddresses(){
+ var list=state.addresses.map(function(a,i){
+  return '<div class="addr-card'+(a.def?" def":"")+'"><span class="addr-ic">'+(a.name==="الشغل"?"💼":(a.name==="أخرى"?"📌":"🏠"))+'</span><div style="flex:1"><b>'+a.name+(a.area?" — "+a.area:"")+(a.def?' <span class="def-tag">افتراضي</span>':"")+'</b><span>'+a.detail+'</span><span>📱 '+a.phone+'</span></div>'+(a.def?'<span class="def-check">✓</span>':'<button class="mini-btn" onclick="setDefAddr('+i+')">اجعله الافتراضي</button>')+'</div>';
+ }).join("");
+ var form="";
+ if(state.addrForm){
+  form='<div class="addr-form"><h4 style="margin:0 0 10px">📍 عنوان جديد</h4>'+
+  '<div class="seg">'+["بيت","شغل","أخرى"].map(function(n){return '<button class="'+(state.addrName===n?"on":"")+'" onclick="setAddrName(\''+n+'\')">'+n+'</button>'}).join("")+'</div>'+
+  '<input class="txt-in" id="addrDetail" placeholder="العنوان بالتفصيل — المنطقة، الشارع، العمارة، علامة مميزة…">'+
+  '<input class="txt-in" id="addrPhone" placeholder="رقم الموبايل للتوصيل" inputmode="tel">'+
+  (state.addrPin
+   ? '<div class="mapbox" style="height:130px;margin-bottom:8px"><svg viewBox="0 0 340 130" preserveAspectRatio="none"><path d="M0 90 C80 70 140 105 220 80 S320 45 340 55" stroke="#fff" stroke-width="12" fill="none"/><path d="M60 0 C75 45 68 90 85 130" stroke="#fff" stroke-width="9" fill="none"/></svg><span class="map-pin" style="top:42px;inset-inline-start:128px">📍 موقعك هنا</span></div><p class="note-sm" style="margin:0 0 10px">اتحدد موقعك على الخريطة ✓ (معاينة نموذجية للمكان)</p>'
+   : '<button class="btn-ghost" style="margin-bottom:10px" onclick="setAddrPin()">🗺️ تحديد الموقع على الخريطة</button>')+
+  '<div class="btn-row"><button class="btn-main" style="justify-content:center" onclick="saveAddr()"><span>💾 حفظ العنوان</span></button><button class="btn-ghost" onclick="closeAddrForm()">إلغاء</button></div></div>';
+ }
+ return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 4px;font-size:20px;font-weight:900">📍 عناويني</h3>'+
+ '<p style="color:var(--muted);margin:0 0 12px;font-size:14px">العنوان الافتراضي هو اللي طلباتك بتوصله تلقائياً — بدّله أو ضيف عنوان جديد في أي وقت ومن أي مكان.</p>'+
+ list+form+
+ (state.addrForm?"":'<button class="btn-main" style="justify-content:center;margin-top:4px" onclick="openAddrForm()"><span>+ إضافة عنوان جديد</span></button>')+
+ '</div>'+custNav("me");
+}
+function sHelp(){
+ var faqs=[
+  ["ازاي أتتبع طلبي؟","من «طلباتي» دوس «تتبع الطلب» — هتشوف حالته خطوة بخطوة ووقت الوصول المتوقع، وهيوصلك إشعار أول ما يخرج وأول ما يتسلم."],
+  ["صنف وصل ناقص أو جودته مش كويسة — أعمل إيه؟","من صفحة الطلب صوّر الصنف وابعته من «المرتجعات» — عيب الجودة في الطازج بيتحسم في نفس اليوم، والاسترداد بينزل في محفظتك على طول تقدر تدفع بيه بعد كده."],
+  ["رسم التوصيل كام؟ وفي حد أدنى للطلب؟","رسم التوصيل بيحدده كل محل بنفسه فبيختلف من محل لمحل، وبيبان ليك في كارت المحل قبل ما تطلب وفي الإيصال باسم المحل قبل ما تأكد الطلب — ولو اخترت الاستلام من المحل في شاشة الدفع، مفيش رسم توصيل خالص. ومفيش حد أدنى للطلب خالص — تقدر تطلب صنف واحد بأي سعر."]
+ ];
+ return statusbar()+'<div class="scr-body"><h3 style="margin:8px 0 4px;font-size:20px;font-weight:900">🎧 المساعدة والدعم</h3>'+
+ '<p style="color:var(--muted);margin:0 0 12px;font-size:14px">فريق الدعم موجود يساعدك — اختار الطريقة اللي تريّحك:</p>'+
+ '<div class="btn-row" style="margin-bottom:6px"><button class="btn-ghost" onclick="toast(\'اتفتح واتساب الدعم 💬 ابعت مشكلتك وهنرد عليك في دقائق\')">💬 واتساب</button><button class="btn-ghost" onclick="toast(\'رقم الدعم 📞 0100 000 0000 — متاح كل يوم من 9 صباحاً لـ 12 بالليل\')">📞 اتصال هاتفي</button><button class="btn-ghost" onclick="toast(\'اتفتح تطبيق الإيميل على بريد الدعم ✉️ اكتب مشكلتك وهنرد خلال يوم عمل\')">✉️ بريد إلكتروني</button></div>'+
+ '<h4 style="margin:14px 0 8px">أسئلة شائعة</h4>'+
+ faqs.map(function(f,i){var open=state.faq===i;return '<div class="faq"><button class="faq-q" onclick="toggleFaq('+i+')"><span>'+f[0]+'</span><span>'+(open?"−":"+")+'</span></button>'+(open?'<div class="faq-a">'+f[1]+'</div>':"")+'</div>'}).join("")+
+ '<h4 style="margin:16px 0 8px">تابعنا على السوشيال</h4>'+
+ [["📘","فيسبوك","العروض والمناطق الجديدة"],["📸","انستجرام","أصناف طازجة كل يوم"],["🎵","تيك توك","فيديوهات قصيرة من السوق"]].map(function(s){return '<button class="menu-row" onclick="toast(\'بيفتح صفحة '+s[1]+' الرسمية '+s[0]+'\')"><span>'+s[0]+' '+s[1]+'</span><span class="mr-v">'+s[2]+'</span><span class="mr-a">‹</span></button>'}).join("")+
+ '<button class="btn-main" style="justify-content:center;margin-top:12px" onclick="toast(\'اتفتحت تذكرة دعم جديدة 🎫 هنرد عليك هنا وفي الإشعارات\')"><span>🎫 افتح تذكرة دعم</span></button>'+
+ '</div>'+custNav("me");
+}
+/* promo + wallet + addresses + help actions */
+function applyPromo(){var el=document.getElementById("promoIn");var v=el?(el.value||"").trim().toUpperCase():"";if(v==="WELCOME10"){state.promoOn=true;state.promoErr="";render();toast("اتطبق الكود 🎟️ خصم 10% على إجمالي المنتجات")}else{state.promoErr="الكود ده مش شغال أو صلاحيته انتهت — راجع الكتابة وجرّب تاني";render()}}
+function removePromo(){state.promoOn=false;state.promoErr="";render();toast("اتشال الكود — الإجمالي رجع من غير خصم")}
+function setDefAddr(i){state.addresses.forEach(function(a,j){a.def=(i===j)});render();toast("📍 بقى هو عنوان التوصيل الافتراضي — طلباتك الجاية هتوصله")}
+function openAddrForm(){state.addrForm=true;state.addrPin=false;state.addrName="بيت";render()}
+function closeAddrForm(){state.addrForm=false;render()}
+function setAddrName(n){state.addrName=n;render()}
+function setAddrPin(){state.addrPin=true;render();toast("اتفتحت الخريطة — حدّد مكانك بالدبوس 📍")}
+function saveAddr(){var d=document.getElementById("addrDetail");var p=document.getElementById("addrPhone");var dv=d?d.value.trim():"";if(!dv){toast("اكتب العنوان بالتفصيل الأول 📍");return}state.addresses.push({name:state.addrName,area:"",detail:dv,phone:(p&&p.value.trim())||"—",def:false});state.addrForm=false;render();toast("اتحفظ العنوان الجديد ✅ هتلاقيه هنا وفي شاشة الدفع")}
+function toggleFaq(i){state.faq=(state.faq===i?-1:i);render()}
+function escHtml(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function setDeliveryNote(v){state.deliveryNote=v}
+/* ===== store rating (customer) ===== */
+function ratingWidget(){
+ var st=storeById(1);
+ if(state.rated){
+  return '<div class="rate-box"><h4>🙏 شكراً يا محمد!</h4><p style="margin:6px 0 2px;font-size:14.5px">قيّمت <b>'+st.name+'</b> بـ '+'⭐'.repeat(state.rated)+' — تقييمك اتحسب خلاص.</p><p style="margin:0;font-size:13.5px;color:var(--muted)">تقييم المحل بقى ⭐ <b style="color:var(--green-d)">'+st.rating+'</b> من '+st.rc+' تقييم — هتلاقيه محدّث على كارت المحل في الرئيسية.</p></div>';
+ }
+ var stars="";for(var i=1;i<=5;i++){stars+='<button class="'+(i<=state.rateStars?"lit":"")+'" onclick="setRateStars('+i+')" aria-label="'+i+' نجوم">★</button>'}
+ return '<div class="rate-box"><h4>⭐ قيّم المحل — '+st.name+'</h4><p style="margin:4px 0 0;font-size:13.5px;color:var(--muted)">طلبك #1031 اتسلم — تقييمك بيفرق مع المحل وبيساعد عملاء غيرك يختاروا</p><div class="stars">'+stars+'</div>'+
+ '<textarea class="txt-in" rows="2" placeholder="تعليقك (اختياري) — إيه اللي عجبك أو مضايقك؟" oninput="setRateComment(this.value)">'+escHtml(state.rateComment)+'</textarea>'+
+ '<button class="btn-main" style="justify-content:center" '+(state.rateStars?"":"disabled")+' onclick="submitRating()"><span>ابعت التقييم</span></button>'+
+ (state.rateStars?"":'<p class="note-sm" style="margin:6px 0 0">اختار عدد النجوم الأول عشان تبعت</p>')+'</div>';
+}
+function setRateStars(n){state.rateStars=n;render()}
+function setRateComment(v){state.rateComment=v}
+function submitRating(){
+ var st=storeById(1);var avg=parseFloat(st.rating);
+ var nv=(avg*st.rc+state.rateStars)/(st.rc+1);
+ st.rc+=1;st.rating=nv.toFixed(1);state.rated=state.rateStars;
+ render();toast("اتسجل تقييمك ⭐ شكراً! تقييم "+st.name+" بقى "+st.rating);
 }
 
 /* ================= MERCHANT SCREENS ================= */
@@ -722,26 +1006,177 @@ function fmtTimer(s){var m=Math.floor(s/60),ss=s%60;return m+":"+(ss<10?"0":"")+
 function sMOrders(){
  var t=state.timer, cls=t>300?"":(t>120?"mid":"late");
  return statusbar()+'<div class="scr-body">'+mHead("طلبات جديدة")+
- '<div class="order-card urgent"><div class="top"><b>طلب #1043 · حصة محلك</b><span class="timer '+cls+'" id="slaTimer">⏱ '+fmtTimer(t)+'</span></div>'+
+ '<div class="order-card urgent"><div class="top"><b>طلب #1043</b><span class="timer '+cls+'" id="slaTimer">⏱ '+fmtTimer(t)+'</span></div>'+
  '<div class="items">6 أصناف · لبن ×2، بيض ×1، طماطم 1 كجم، عيش ×1، جبنة رومي 250 جم، زيت ×1</div>'+
  '<div class="top"><span style="font-weight:900;color:var(--green-d);font-size:17px">312 ج</span><span class="status-pill st-new">جديد</span></div>'+
  '<div style="margin-top:12px"><button class="btn-main" style="justify-content:center;width:100%" onclick="acceptOrder()">✓ قبول وابدأ التحضير</button></div></div>'+
- '<div class="order-card"><div class="top"><b>طلب #1044 · حصة محلك</b><span class="timer late">⏱ 0:45</span></div>'+
+ '<div class="order-card"><div class="top"><b>طلب #1044</b><span class="timer late">⏱ 0:45</span></div>'+
  '<div class="items">3 أصناف · أرز ×1، سكر ×1، زبادي ×2</div>'+
- '<div class="top"><span style="font-weight:900;color:var(--green-d);font-size:17px">118 ج</span><span class="status-pill st-new">جديد</span></div>'+
- '<div style="margin-top:12px"><button class="btn-main" style="justify-content:center;width:100%" onclick="acceptOrder()">✓ قبول وابدأ التحضير</button></div></div>'+
+ '<div class="top"><span style="font-weight:900;color:var(--green-d);font-size:17px">118 ج</span><span><span class="status-pill st-pickup">🏪 استلام من المحل</span> <span class="status-pill st-new">جديد</span></span></div>'+
+ '<div class="items" style="margin-top:6px">العميل هيستلم من المحل بنفسه برقم الطلب — مفيش كابتن ولا رسم توصيل على الطلب ده</div>'+
+ '<div style="margin-top:12px"><button class="btn-main" style="justify-content:center;width:100%" onclick="acceptOrder(\'pickup\')">✓ قبول وابدأ التحضير</button></div></div>'+
  '<div class="sec-t"><h4>بيتحضر دلوقتي</h4></div>'+
- '<div class="order-card"><div class="top"><b>طلب #1042 · حصتك</b><span class="status-pill st-prep">بيتحضر · فاضل صنفين</span></div><div class="items">لبن ×1 · طماطم 1 كجم · عيش ×1</div><button class="btn-ghost" onclick="go(\'m-detail\')">كمّل التجهيز ←</button></div></div>'+merchNav("orders");
+ '<div class="order-card"><div class="top"><b>طلب #1042</b><span class="status-pill st-prep">بيتحضر · فاضل صنفين</span></div><div class="items">لبن ×1 · طماطم 1 كجم · عيش ×1</div><button class="btn-ghost" onclick="go(\'m-detail\')">كمّل التجهيز ←</button></div>'+
+ '<div class="order-card"><div class="top"><b>طلب #1039</b><span class="status-pill st-way">🚴 جاهز — مع المندوب</span></div><div class="items">4 أصناف · الشنطة اتسلمت للمندوب وخرج بيها — العنوان والتعليمات ورقم العميل في صفحة التوصيل</div><button class="btn-ghost" onclick="go(\'m-delivery\')">افتح صفحة التوصيل ←</button></div>'+
+ '<div class="order-card"><div class="top"><b>طلب #1045</b><span class="status-pill st-pickup">🏪 استلام من المحل</span></div><div class="items">زيت ×1 · جبنة رومي 250 جم — الشنطة جاهزة عند الكاشير والعميل في الطريق للمحل</div><div class="top"><span class="status-pill st-prep">بيتحضر · اكتمل التجهيز</span><span style="font-weight:900;color:var(--green-d)">147 ج</span></div><div style="margin-top:10px"><button class="btn-main" style="justify-content:center;width:100%" onclick="toast(\'اتبعث إشعار للعميل 📲 طلبك #1045 جاهز للاستلام من سوبر ماركت النور\')">🏪 جاهز للاستلام</button></div></div></div>'+merchNav("orders");
+}
+/* ===== barcode picking ===== */
+var PREP_ITEMS=[{id:1,qty:2,label:"×2"},{id:2,qty:1,label:"×1"},{id:3,qty:2,label:"1 كجم (وحدتين)"},{id:4,qty:1,label:"×1"},{id:5,qty:1,label:"250 جم"},{id:6,qty:1,label:"×1"}];
+function prepEntry(id){if(!state.prep[id])state.prep[id]={n:0,manual:null,short:false};return state.prep[id]}
+function prepDoneUnits(){var t=0;PREP_ITEMS.forEach(function(i){t+=Math.min(prepEntry(i.id).n,i.qty)});return t}
+function prepTotalUnits(){var t=0;PREP_ITEMS.forEach(function(i){t+=i.qty});return t}
+function prepAllDone(){return PREP_ITEMS.every(function(i){var e=prepEntry(i.id);return e.n>=i.qty&&!e.short})}
+function prepAnyShort(){return PREP_ITEMS.some(function(i){return prepEntry(i.id).short})}
+var _ac=null;
+function beep(){try{_ac=_ac||new (window.AudioContext||window.webkitAudioContext)();if(_ac.state==="suspended")_ac.resume();var o=_ac.createOscillator(),g=_ac.createGain();o.type="sine";o.frequency.value=1180;g.gain.setValueAtTime(.16,_ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,_ac.currentTime+.14);o.connect(g);g.connect(_ac.destination);o.start();o.stop(_ac.currentTime+.15)}catch(e){}}
+/* ===== camera barcode scanner (simulation) ===== */
+var BARCODES={1:"6221001234568",2:"6223009876542",3:"6221055500121",4:"6224017788995",5:"6221076543213",6:"6221048123450"};
+var camT1=null,camT2=null;
+function clearCamTimers(){if(camT1){clearTimeout(camT1);camT1=null}if(camT2){clearTimeout(camT2);camT2=null}}
+function openCamera(id){
+ var e=prepEntry(id);if(e.manual)return;
+ clearCamTimers();state.manualOpen=null;
+ state.cam={id:id,phase:"scanning",flash:false,manual:false,err:""};
+ render();
+ camT1=setTimeout(function(){if(state.cam&&state.cam.id===id&&state.cam.phase==="scanning"&&!state.cam.manual)camSucceed()},1250);
+}
+function camSucceed(){
+ if(!state.cam||state.cam.phase!=="scanning")return;
+ clearCamTimers();state.cam.phase="success";beep();render();
+ camT2=setTimeout(camFinish,1200);
+}
+function camFinish(){
+ if(!state.cam)return;
+ var id=state.cam.id;clearCamTimers();state.cam=null;
+ applyScan(id);
+}
+function closeCamera(){clearCamTimers();state.cam=null;render()}
+function toggleFlash(){if(!state.cam)return;state.cam.flash=!state.cam.flash;render()}
+function camShowManual(){
+ if(!state.cam)return;
+ clearCamTimers();state.cam.manual=true;state.cam.err="";render();
+ var inp=document.getElementById("camCodeIn");if(inp)inp.focus();
+}
+function camHideManual(){
+ if(!state.cam)return;
+ var id=state.cam.id;state.cam.manual=false;state.cam.err="";render();
+ camT1=setTimeout(function(){if(state.cam&&state.cam.id===id&&state.cam.phase==="scanning"&&!state.cam.manual)camSucceed()},1250);
+}
+function camConfirmCode(){
+ if(!state.cam)return;
+ var inp=document.getElementById("camCodeIn");
+ var v=inp?(inp.value||"").replace(/\s/g,""):"";
+ if(v===BARCODES[state.cam.id]){camSucceed()}
+ else{state.cam.err="الباركود ده مش بتاع المنتج المطلوب — اتأكد من الرقم وحاول تاني";render();var i2=document.getElementById("camCodeIn");if(i2){i2.focus();i2.select()}}
+}
+function camNoRead(){
+ if(!state.cam)return;
+ var id=state.cam.id;clearCamTimers();state.cam=null;state.manualOpen=id;render();
+ toast("اختار سبب التأكيد اليدوي تحت «"+prod(id).name+"» — وبيتسجل في سجل الطلب");
+}
+function camOverlay(){
+ var cam=state.cam;if(!cam)return "";
+ var it=PREP_ITEMS.filter(function(x){return x.id===cam.id})[0];var p=prod(cam.id);var e=prepEntry(cam.id);
+ var h='<div class="cam-overlay'+(cam.flash?" flash-on":"")+'">'+
+ '<div class="cam-top"><div class="cam-prod"><b>'+p.name+'</b><span>اتحضّر '+e.n+' من '+it.qty+' · '+p.unit+'</span></div><button class="cam-x" onclick="closeCamera()" aria-label="إلغاء المسح">✕</button></div>';
+ if(cam.phase==="success"){
+  h+='<div class="cam-success"><div class="ck">✓</div><b>اتعرف على المنتج: '+p.name+'</b><span class="bc">'+BARCODES[cam.id]+'</span><span>مسحة ناجحة — بيتسجل في التحضير…</span></div>';
+ }else if(cam.manual){
+  h+='<div class="cam-guide">اكتب رقم الباركود اللي على <b>«'+p.name+'»</b> زي ما هو مطبوع</div>'+
+  '<div class="cam-manual"><label for="camCodeIn">رقم الباركود (13 رقم)</label>'+
+  '<input id="camCodeIn" dir="ltr" inputmode="numeric" autocomplete="off" placeholder="622…" onkeydown="if(event.key===\'Enter\')camConfirmCode()">'+
+  (cam.err?'<div class="cam-err">⚠️ '+cam.err+'</div>':"")+
+  '<div class="cam-demo-hint">تلميح للديمو: باركود المنتج ده '+BARCODES[cam.id]+' — جرّب رقم غلط وشوف رسالة الخطأ</div>'+
+  '<button class="btn-main" style="justify-content:center;margin-top:12px" onclick="camConfirmCode()"><span>تأكيد الباركود</span></button>'+
+  '<button class="cam-noread" onclick="camHideManual()">→ رجوع للكاميرا</button></div>'+
+  '<div style="flex:1"></div>'+
+  '<button class="cam-noread" onclick="camNoRead()">الباركود مش بيقرأ؟ تأكيد يدوي بسبب</button>';
+ }else{
+  h+='<div class="cam-guide">وجّه الكاميرا ناحية باركود <b>«'+p.name+'»</b></div>'+
+  '<div class="cam-stage"><div class="cam-frame"><span class="fc tl"></span><span class="fc tr"></span><span class="fc bl"></span><span class="fc br"></span><div class="cam-code"></div><div class="cam-line"></div></div></div>'+
+  '<div class="cam-hint">خلي الباركود جوه الإطار — المسح بيتم لوحده أول ما يقرأ</div>'+
+  '<div class="cam-actions"><button class="cam-flash'+(cam.flash?" on":"")+'" onclick="toggleFlash()" aria-label="تشغيل أو إطفاء الفلاش">🔦</button><button class="cam-manual-btn" onclick="camShowManual()">⌨️ إدخال الباركود يدوياً</button></div>'+
+  '<button class="cam-noread" onclick="camNoRead()">الباركود مش بيقرأ؟</button>';
+ }
+ return h+'</div>';
+}
+function applyScan(id){
+ var it=PREP_ITEMS.filter(function(x){return x.id===id})[0];var e=prepEntry(id);
+ if(e.manual)return;
+ if(e.n>=it.qty){if(e.short){e.short=false;beep();render()}return}
+ e.n+=1;e.short=false;state.scanFx=id;render();
+ if(e.n>=it.qty)toast("اكتمل «"+prod(id).name+"» ✓ "+it.qty+" من "+it.qty);
+ else toast("اتمسح «"+prod(id).name+"» ✓ بقى "+e.n+" من "+it.qty+" — امسح اللي بعده");
+}
+function toggleManual(id){state.manualOpen=(state.manualOpen===id?null:id);render()}
+function manualConfirm(id,reason){
+ var it=PREP_ITEMS.filter(function(x){return x.id===id})[0];var e=prepEntry(id);
+ e.manual=reason;e.n=it.qty;e.short=false;state.manualOpen=null;beep();render();
+ toast("اتسجل تأكيد يدوي استثنائي لـ«"+prod(id).name+"» — السبب: "+reason+" (متسجل في سجل الطلب)");
+}
+function declareShort(id){
+ var e=prepEntry(id);e.short=true;state.manualOpen=null;render();
+ toast("اتعلّم «"+prod(id).name+"» بند ناقص — واتسجلت حادثة دقة على المحل ⚠️");
+}
+function readyOrder(){
+ if(state.mMethod==="pickup"){toast("اتبعث إشعار للعميل 📲 طلبك جاهز للاستلام من سوبر ماركت النور — وري رقم طلبك عند الكاشير");return}
+ state.delivDone=false;go("m-delivery");toast("الطلب جاهز للتسليم ✅ اتنقل لصفحة التوصيل — سلّم الشنطة للمندوب");
+}
+function prepItemCard(it){
+ var p=prod(it.id);var e=prepEntry(it.id);
+ var complete=e.n>=it.qty&&!e.short;
+ var body='<div class="prep-item'+(complete?" complete":"")+(e.short?" short":"")+'">'+
+ '<div class="pi-top"><div class="pi-img" style="background:'+p.bg+'">'+p.emoji+'</div><div style="flex:1;min-width:0"><h5>'+p.name+'</h5><div class="pi-unit">'+p.unit+' · المطلوب: '+it.label+'</div></div>'+
+ '<div class="pi-count"><b>'+e.n+' / '+it.qty+'</b><span>اتحضّر / مطلوب</span></div></div>';
+ if(e.manual){
+  body+='<div class="scan-ok man">✋ تأكيد يدوي استثنائي — السبب: '+e.manual+'<span style="font-weight:700;font-size:12.5px">(متسجل في سجل الطلب)</span></div>';
+ }else if(complete){
+  body+='<div class="scan-ok">✓ اكتمل بالباركود — '+it.qty+' من '+it.qty+'</div>';
+ }else if(e.short){
+  body+='<div class="scan-ok" style="background:var(--red-soft);border-color:var(--pen);color:#7A130C">⚠️ اتعلّم البند ده ناقص — كمل مسح لو لقيته، أو سيبه ناقص وهيتخصم من تقييم المحل</div>'+
+  '<button class="scan-btn" onclick="openCamera('+it.id+')">📷 مسح بالكاميرا — فاضل '+(it.qty-e.n)+'</button>';
+ }else{
+  body+='<button class="scan-btn" onclick="openCamera('+it.id+')">📷 مسح بالكاميرا'+(e.n>0?' — فاضل '+(it.qty-e.n):' — امسح '+it.qty+' وحدة')+'</button>';
+  if(state.scanFx===it.id&&e.n>0)body+='<div class="scan-ok" style="margin-top:8px">✓ مسحة ناجحة — بقى '+e.n+' من '+it.qty+'</div>';
+ }
+ if(!e.manual&&!complete){
+  body+='<button class="nobar-link" onclick="toggleManual('+it.id+')">المنتج من غير باركود؟</button>';
+  if(state.manualOpen===it.id){
+   body+='<div style="font-size:13px;font-weight:800;margin-top:2px">التأكيد اليدوي استثناء وبيتسجل بالسبب — اختار السبب:</div><div class="reason-row"><button class="mini-btn" onclick="manualConfirm('+it.id+',\'من غير باركود\')">من غير باركود</button><button class="mini-btn" onclick="manualConfirm('+it.id+',\'باركود تالف\')">باركود تالف</button></div>';
+  }
+  if(!e.short)body+='<br><button class="short-link" onclick="declareShort('+it.id+')">مش لاقي البند ده خالص؟ أعلن نقص فيه</button>';
+ }
+ return body+'</div>';
 }
 function sMDetail(){
- var items=[[1,"لبن كامل الدسم 1 لتر","×2"],[2,"بيض بلدي 10 بيضات","×1"],[3,"طماطم بلدي","1 كجم (وحدتين)"],[4,"عيش فينو","×1"],[5,"جبنة رومي مبشورة","250 جم"],[6,"زيت عباد الشمس","×1"]];
- var done=items.filter(function(i){return state.picked[i[0]]}).length;
- return statusbar()+'<div class="scr-body">'+mHead("تجهيز طلب #1043")+
- '<div class="freebar" style="margin-top:0"><div class="t"><span>اتعلّم '+done+' من '+items.length+' أصناف</span><span class="timer mid">⏱ تحضير: 3:40</span></div><div class="track"><div class="fill" style="width:'+Math.round(done/items.length*100)+'%"></div></div></div>'+
- items.map(function(i){var p=prod(i[0]);var dn=state.picked[i[0]];return '<button class="check '+(dn?"done":"")+'" onclick="togglePick('+i[0]+')"><span class="box">'+(dn?"✓":"")+'</span><span class="nm">'+p.emoji+" "+i[1]+'</span><span class="q">'+i[2]+'</span></button>'}).join("")+
- '<p class="note-sm">صنف ناقص عندك؟ علّمه «مش موجود» وسياسة العميل المختارة (بديل مشابه) هتتنفذ تلقائياً.</p></div>'+
- '<div class="cta-bar"><button class="btn-main" '+(done<items.length?"disabled":"")+' onclick="toast(\'الطلب جاهز ✅ المندوب هيستلم — كود التسليم الداخلي اتبعت للمحل الرئيسي\')"><span>🛍️ الشنطة جاهزة للتسليم</span><span>'+done+'/'+items.length+'</span></button></div>';
+ var doneU=prepDoneUnits(),totU=prepTotalUnits(),all=prepAllDone();
+ return statusbar()+'<div class="scr-body">'+mHead("تحضير طلب #1043 بالباركود"+(state.mMethod==="pickup"?" — استلام من المحل":""))+(state.mMethod==="pickup"?'<div style="margin-bottom:10px"><span class="status-pill st-pickup">🏪 استلام من المحل — العميل هيستلم بنفسه برقم الطلب، مفيش كابتن</span></div>':"")+
+ '<div class="freebar" style="margin-top:0"><div class="t"><span>اتحضّر '+doneU+' من '+totU+' وحدة · '+PREP_ITEMS.length+' بنود</span><span class="timer mid">⏱ تحضير: 3:40</span></div><div class="track"><div class="fill" style="width:'+Math.round(doneU/totU*100)+'%"></div></div></div>'+
+ (prepAnyShort()?'<div class="warn-banner"><b>⚠️ تنبيه قبل ما تعلن النقص نهائي</b>البند الناقص بيأثر في تقييم وأداء محلك: بيتحسب حادثة دقة، بينزّل سكور التنفيذ، وبيقلل ظهور محلك وطلباته الجاية. اتأكد إن الصنف مش موجود فعلاً في المحل قبل ما تكمل.</div>':"")+
+ PREP_ITEMS.map(prepItemCard).join("")+
+ '<p class="note-sm">التأكيد بمسح الباركود بالكاميرا بس — مفيش تعليم يدوي بضغطة على المنتج. كل وحدة مطلوبة = فتحة كاميرا ومسحة واحدة، والمنتج مبيكملش غير لما المحضّر يساوي المطلوب. التأكيد اليدوي للمنتجات اللي من غير باركود مقروء بس، وبيتسجل سببه في سجل الطلب.</p></div>'+
+ '<div class="cta-bar">'+(state.mMethod==="pickup"?'<button class="btn-main" '+(all?"":"disabled")+' onclick="readyOrder()"><span>🏪 جاهز للاستلام</span><span>'+doneU+'/'+totU+'</span></button>':'<button class="btn-main" '+(all?"":"disabled")+' onclick="readyOrder()"><span>🛍️ جاهز للتسليم — انقل لصفحة التوصيل</span><span>'+doneU+'/'+totU+'</span></button>')+'</div>';
 }
+function sMDelivery(){
+ var note=state.deliveryNote;
+ return statusbar()+'<div class="scr-body">'+mHead("صفحة التوصيل — طلب #1043")+
+ '<div style="display:flex;gap:8px;align-items:center;margin-bottom:12px"><span class="status-pill '+(state.delivDone?"st-done":"st-way")+'">'+(state.delivDone?"✅ اتسلم للعميل":"🛍️ الشنطة جاهزة — مع مندوب المحل")+'</span><span style="font-size:13px;color:var(--muted);font-weight:700">مندوب المحل: أحمد سامي 🚴</span></div>'+
+ '<div class="sec-t" style="margin-top:2px"><h4>📍 عنوان العميل — محمد المصري</h4></div>'+
+ '<div class="addr-lines">'+
+ '<div class="al"><b>المنطقة</b><span>سموحة</span></div>'+
+ '<div class="al"><b>الشارع</b><span>شارع النصر، عمارة 12</span></div>'+
+ '<div class="al"><b>الدور والشقة</b><span>الدور 3 — شقة 7</span></div>'+
+ '<div class="al land"><b>علامة مميزة</b><span>العمارة اللي جنب صيدلية النور، مدخلها على ناصية شارع النصر 🚪</span></div></div>'+
+ '<div class="'+(note?"instr-box":"instr-box empty-i")+'"><div class="ib-t">📝 تعليمات التوصيل من العميل — اقراها قبل ما تتحرك</div><div class="ib-v">'+(note?escHtml(note):"العميل مسابش تعليمات توصيل للطلب ده — سلّم بالطريقة العادية وكلّمه عند الوصول.")+'</div></div>'+
+ '<div class="addr"><span style="font-size:22px">📱</span><div style="flex:1"><b>رقم العميل</b><span dir="ltr" style="text-align:right;display:block;font-family:\'IBM Plex Mono\',monospace">0100 000 0000</span></div><button class="mini-btn" onclick="toast(\'📞 جاري الاتصال بالعميل محمد المصري…\')">📞 اتصال</button></div>'+
+ '<div class="sum" style="margin-bottom:12px"><div class="r"><span>عدد البنود</span><b>6 بنود · 8 وحدات (اتحضرت كلها بالباركود ✓)</b></div><div class="r"><span>إجمالي الطلب</span><span>312 ج</span></div><div class="r"><span>الدفع</span><b>كاش عند الاستلام — المندوب يقبض 312 ج</b></div><div class="r"><span>رسم التوصيل (بيوصلك كامل)</span><span>'+money(storeById(1).fee)+'</span></div></div>'+
+ '<div class="btn-row" style="margin-bottom:10px"><button class="btn-ghost" onclick="toast(\'اتفتح العنوان في خرائط جوجل 🗺️ شارع النصر، سموحة — 0.4 كم من المحل\')">🗺️ افتح في الخرائط</button><button class="btn-ghost" onclick="go(\'m-orders\')">→ كل الطلبات</button></div>'+
+ (state.delivDone
+  ? '<div class="scan-ok">✅ اتسجل التسليم — الرصيد هيستوي T+1 ويبقى متاح للتحويل InstaPay</div>'
+  : '<button class="btn-main" style="justify-content:center" onclick="delivDone()"><span>✅ تم التسليم للعميل</span></button>')+
+ '</div>'+merchNav("delivery");
+}
+function delivDone(){state.delivDone=true;render();toast("اتسجل تسليم طلب #1043 ✅ شكراً — المشوار اتقفل")}
 function sMInv(){
  var ids=[1,3,5,8];
  return statusbar()+'<div class="scr-body">'+mHead("مخزوني")+
@@ -764,6 +1199,9 @@ function sMSettle(){
  '<div class="r"><span>تعويض خطأ منصة لصالحك</span><span>+ 0 ج</span></div>'+
  '<div class="r total"><span>صافي مستحقاتك</span><span>4,730 ج</span></div>'+
  '<div class="r"><span style="font-size:12.5px;color:var(--muted)">= 3,810 ج متاح دلوقتي + 920 ج معلّق لبكرة — مفيش انتظار لآخر الأسبوع</span></div></div>'+
+ '<div class="sec-t"><h4>إعدادات محلك</h4></div>'+
+ '<div class="inv-row"><span style="font-size:24px">🚴</span><div style="flex:1"><h5>رسم التوصيل</h5><span>الرسم اللي عملاؤك بيدفعوه على طلبات التوصيل من محلك — بيظهر في كارت محلك قبل ما يطلبوا، وبيوصلك كامل مع كل طلب توصيل. طلبات الاستلام من المحل من غير رسم توصيل.</span></div><div class="stepper"><button onclick="feeDelta(-5)">−</button><b>'+money(storeById(1).fee)+'</b><button onclick="feeDelta(5)">+</button></div></div>'+
+ '<p class="note-sm" style="margin:-4px 0 12px">ملحوظة: المنصة حاطة حد أقصى لرسم التوصيل 50 ج — تقدر تنزّل أو تزوّد رسمك في أي وقت لحد الحد ده، والتعديل بيظهر للعملاء فوراً.</p>'+
  '<div class="sec-t"><h4>بتشتغل ازاي؟</h4></div>'+
  '<div class="timeline">'+
  '<div class="tl done"><span class="dot">✓</span><div><b>الطلب اتسلّم واتأكد</b><span>الرصيد بيبقى «معلّق» يوم التنفيذ</span></div></div>'+
@@ -787,16 +1225,17 @@ function sADash(){
  return admShell("لوحة المؤشرات","الثلاثاء 25 نوفمبر 2026 · منطقة الإطلاق: سموحة",
  '<div class="kpi-row"><div class="adm-kpi"><span>طلبات اليوم</span><b>186</b><span class="up">▲ 12% عن امبارح</span></div><div class="adm-kpi"><span>قيمة المبيعات GMV</span><b>50,240 ج</b><span class="up">متوسط سلة 270 ج</span></div><div class="adm-kpi"><span>متوسط زمن التوصيل</span><b>9 د</b><span class="up">متوسط فعلي النهاردة</span></div><div class="adm-kpi"><span>طلبات اتسلمت النهاردة</span><b>172</b><span class="up">شكاوى الجودة 0.8% — داخل الهدف (1.5%)</span></div></div>'+
  '<div class="panel"><h3>الطلبات بالساعة</h3><div class="bars">'+[22,35,58,84,66,44,52,95,120,88,54,30].map(function(v,i){return '<div class="bar" style="height:'+Math.round(v/120*100)+'%"><span>'+v+'</span></div>'}).join("")+'</div><div class="bar-l">'+["9ص","10","11","12ظ","1","2","3","4","5","6م","7","8"].map(function(h){return "<span>"+h+"</span>"}).join("")+'</div></div>'+
- '<div class="panel"><h3>⚠️ تنبيهات تشغيلية</h3><p style="margin:0;font-size:14.5px">· محل «الخير» تجاوز زمن القبول مرتين النهاردة — سكوره نزل لـ 4.1<br>· صنف «لبن جهينة 1 لتر» نافد عند محلين من 3 — راجع حصص الأونلاين<br>· طلب مقسّم #1043 بيتنفذ برايدر مستقل (خطة السقوط ١)</p></div>');
+ '<div class="panel"><h3>⚠️ تنبيهات تشغيلية</h3><p style="margin:0;font-size:14.5px">· محل «الخير» تجاوز زمن القبول مرتين النهاردة — سكوره نزل لـ 4.1<br>· صنف «لبن جهينة 1 لتر» نافد عند محلين من 3 — راجع حصص الأونلاين<br>· طلب #1043 من سوبر ماركت النور بيتحضر دلوقتي وفي وقته</p></div>');
 }
 function sAOrders(){
- return admShell("الطلبات الحية والتوزيع","التوزيع تلقائي حسب المخزون والقرب وسكور التنفيذ — العميل مش شايف أي تقسيم",
- '<table><tr><th>الطلب</th><th>العميل / المنطقة</th><th>القيمة</th><th>الحالة</th><th>التوزيع على المحلات</th></tr>'+
- '<tr class="hl"><td><b>#1043</b><br><small>منذ 4 د</small></td><td>أحمد س.<br><small>سموحة</small></td><td>486 ج</td><td><span class="status-pill st-prep">بيتحضر</span></td><td><b>مقسّم على محلين</b><div class="split"><b>النور (رئيسي):</b> 6 أصناف · 312 ج · بيجهز ✅<br><b>الخير:</b> 3 أصناف · 174 ج · جاهز، الرايدر المستقل هيعدي ياخدها</div></td></tr>'+
- '<tr><td><b>#1042</b><br><small>منذ 7 د</small></td><td>منى ع.<br><small>سيدي جابر</small></td><td>164 ج</td><td><span class="status-pill st-way">في الطريق</span></td><td>النور بالكامل · خرج 12:05 · إغلاق تلقائي GPS شغال</td></tr>'+
- '<tr><td><b>#1044</b><br><small>منذ دقيقة</small></td><td>كريم م.<br><small>سبورتنج</small></td><td>118 ج</td><td><span class="status-pill st-new">جديد — مستني قبول</span></td><td>النور · مؤقّت القبول 0:45 ⏱</td></tr>'+
- '<tr><td><b>#1041</b><br><small>منذ 48 د</small></td><td>سارة خ.<br><small>سموحة</small></td><td>355 ج</td><td><span class="status-pill st-done">اتسلم</span></td><td>البركة بالكامل · اتقفل تلقائياً (GPS + من غير شكوى)</td></tr></table>'+
- '<p class="note-sm">رسوم التوصيل على العميل واحدة مهما اتقسم الطلب — تكلفة الرايدر المستقل على المنصة ضمن خطة السقوط.</p>');
+ return admShell("الطلبات الحية","كل طلب مرتبط بمحل واحد اختاره العميل بنفسه من قائمة المحلات",
+ '<table><tr><th>الطلب</th><th>العميل / المنطقة</th><th>القيمة</th><th>الحالة</th><th>طريقة الاستلام</th><th>المحل</th></tr>'+
+ '<tr class="hl"><td><b>#1043</b><br><small>منذ 4 د</small></td><td>أحمد س.<br><small>سموحة</small></td><td>312 ج</td><td><span class="status-pill st-prep">بيتحضر</span></td><td><span class="status-pill st-way">🚴 توصيل</span></td><td><b>سوبر ماركت النور</b><br><small>6 أصناف · بيجهز ✅ · كابتن المحل هيستلم ويوصل</small></td></tr>'+
+ '<tr><td><b>#1042</b><br><small>منذ 7 د</small></td><td>منى ع.<br><small>سيدي جابر</small></td><td>164 ج</td><td><span class="status-pill st-way">في الطريق</span></td><td><span class="status-pill st-way">🚴 توصيل</span></td><td>سوبر ماركت النور · خرج 12:05 · إغلاق تلقائي GPS شغال</td></tr>'+
+ '<tr><td><b>#1044</b><br><small>منذ دقيقة</small></td><td>كريم م.<br><small>سبورتنج</small></td><td>118 ج</td><td><span class="status-pill st-new">جديد — مستني قبول</span></td><td><span class="status-pill st-pickup">🏪 استلام من المحل</span></td><td>بقالة الخير · مؤقّت القبول 0:45 ⏱ · العميل هيستلم بنفسه — بدون رسم توصيل</td></tr>'+
+ '<tr><td><b>#1041</b><br><small>منذ 48 د</small></td><td>سارة خ.<br><small>سموحة</small></td><td>355 ج</td><td><span class="status-pill st-done">اتسلم</span></td><td><span class="status-pill st-way">🚴 توصيل</span></td><td>ماركت البركة · اتقفل تلقائياً (GPS + من غير شكوى)</td></tr>'+
+ '<tr><td><b>#1040</b><br><small>منذ ساعتين</small></td><td>هبة ر.<br><small>سموحة</small></td><td>96 ج</td><td><span class="status-pill st-done">تم الاستلام من المحل</span></td><td><span class="status-pill st-pickup">🏪 استلام من المحل</span></td><td>سوبر ماركت النور · العميل استلم برقم الطلب — بدون رسم توصيل</td></tr></table>'+
+ '<p class="note-sm">رسم التوصيل بيحدده كل محل بنفسه وبيختلف من محل لمحل (النور 30 ج · الخير 20 ج · البركة 25 ج · الورد 35 ج) وبيتثبّت في الطلب وقت تأكيده — طلبات الاستلام من المحل من غير رسم توصيل خالص.</p>');
 }
 function sAStores(){
  return admShell("المحلات","3 محلات في منطقة الإطلاق (نموذج توضيحي — التعاقد الفعلي لم يبدأ بعد)",
@@ -808,46 +1247,67 @@ function sAStores(){
 }
 function sACatalog(){
  return admShell("الكتالوج الرئيسي","منتج موحّد واحد بالباركود لكل المحلات — ده أصل بيانات المنصة",
- '<table><tr><th>المنتج</th><th>الباركود</th><th>البراند / المنتج</th><th>السعر الموحّد</th><th>نسبة النفاد (شهر)</th></tr>'+
+ '<table><tr><th>المنتج</th><th>الباركود</th><th>البراند / المنتج</th><th>السعر عند النور</th><th>نسبة النفاد (شهر)</th></tr>'+
  '<tr><td>🥛 لبن كامل الدسم 1 لتر</td><td dir="ltr">6223001360012</td><td>جهينة</td><td>42 ج</td><td>6%</td></tr>'+
  '<tr><td>🫗 زيت عباد الشمس 1 لتر</td><td dir="ltr">6221048123456</td><td>عافية</td><td>92 ج</td><td>3%</td></tr>'+
  '<tr><td>🍚 أرز مصري 1 كجم</td><td dir="ltr">6222019456789</td><td>الضحى</td><td>38 ج</td><td>4%</td></tr>'+
  '<tr><td>🍅 طماطم بلدي (بالوزن)</td><td dir="ltr">— (وزن)</td><td>سوق محلي</td><td>28 ج / كجم</td><td>11%</td></tr>'+
  '<tr><td>🧀 جبنة رومي (بالوزن)</td><td dir="ltr">— (وزن)</td><td>سوق محلي</td><td>220 ج / كجم</td><td>5%</td></tr></table>'+
- '<div class="panel" style="margin-top:16px"><h3>ليه الكتالوج ده أصل بيكبر؟</h3><p style="margin:0;font-size:14.5px">كل بيع متسجل على مستوى الصنف مع البراند والمنتج والوقت والمنطقة — دي بيانات مبيعات حقيقية (Sell-Out) السوق التقليدي مش باينة للمنتجين، وقيمتها بتظهر لاحقاً في التفاوض والعروض الممولة والتقارير المجمعة المجهولة.</p></div>');
+ '<div class="panel" style="margin-top:16px"><h3>ليه الكتالوج ده أصل بيكبر؟</h3><p style="margin:0;font-size:14.5px">كل بيع متسجل على مستوى الصنف مع البراند والمنتج والوقت والمنطقة — دي بيانات مبيعات حقيقية (Sell-Out) السوق التقليدي مش باينة للمنتجين، وقيمتها بتظهر لاحقاً في التفاوض والتقارير المجمعة المجهولة.</p></div>');
 }
 
 /* ================= RENDER ================= */
-var RENDER={"c-home":sHome,"c-cat":sCat,"c-prod":sProd,"c-cart":sCart,"c-pay":sPay,"c-track":sTrack,"c-orders":sOrders,"m-home":sMHome,"m-orders":sMOrders,"m-detail":sMDetail,"m-inv":sMInv,"m-settle":sMSettle,"a-dash":sADash,"a-orders":sAOrders,"a-stores":sAStores,"a-catalog":sACatalog};
+var RENDER={"c-home":sHome,"c-store":sStore,"c-cat":sCat,"c-prod":sProd,"c-cart":sCart,"c-pay":sPay,"c-track":sTrack,"c-orders":sOrders,"c-addresses":sAddresses,"c-help":sHelp,"m-home":sMHome,"m-orders":sMOrders,"m-detail":sMDetail,"m-delivery":sMDelivery,"m-inv":sMInv,"m-settle":sMSettle,"a-dash":sADash,"a-orders":sAOrders,"a-stores":sAStores,"a-catalog":sACatalog};
 function render(){
  var app=APPS[state.app];
  document.getElementById("appTabs").innerHTML=Object.keys(APPS).map(function(k){var a=APPS[k];return '<button class="app-tab '+(state.app===k?"active":"")+'" onclick="setApp(\''+k+'\')"><span class="ic">'+a.icon+'</span><span><b>'+a.label+'</b><small>'+a.sub+' · '+a.screens.length+' شاشات</small></span></button>'}).join("");
  document.getElementById("scrList").innerHTML=app.screens.map(function(s,i){return '<button class="scr-btn '+(state.screen===s.id?"active":"")+'" onclick="go(\''+s.id+'\')"><span style="display:flex;gap:9px;align-items:center"><span class="n">'+(i+1)+'</span>'+s.n+'</span></button>'}).join("");
  var html=RENDER[state.screen]();
+ if(state.app==="customer")html+=conflictModal();
+ if(state.app==="merchant")html+=camOverlay();
  var wrap=document.getElementById("deviceWrap");
  if(app.type==="phone"){
    wrap.innerHTML='<div class="phone"><div class="phone-scr '+(state.app==="merchant"?"merchant":"")+'">'+html+'</div></div>';
  }else{
-   wrap.innerHTML='<div class="desktop">'+html+'</div><p class="flow-hint">لوحة ويب (React) — اتنقل بين المؤشرات والطلبات الحية والمحلات والكتالوج من القائمة الجانبية، <b>وافتح الطلب المقسّم #1043</b> عشان تشوف التوزيع بيبان ازاي.</p>';
+   wrap.innerHTML='<div class="desktop">'+html+'</div><p class="flow-hint">لوحة ويب (React) — اتنقل بين المؤشرات والطلبات الحية والمحلات والكتالوج من القائمة الجانبية — وكل طلب بيبان جنبه المحل اللي العميل اختاره.</p>';
  }
  window.scrollTo({top:document.querySelector(".switcher").offsetTop-8,behavior:"smooth"});
 }
-function setApp(k){state.app=k;state.screen=APPS[k].screens[0].id;if(k==="admin")state.adminScr=state.screen;render()}
-function go(id){state.screen=id;if(id[0]==="a")state.adminScr=id;if(id[0]==="c")state.app="customer";if(id[0]==="m")state.app="merchant";if(id[0]==="a")state.app="admin";render()}
-function setQty(id,q){if(q<=0)delete state.cart[id];else state.cart[id]=q;render();if(q>0&&(state.screen==="c-home"||state.screen==="c-cat"))toast("اتضاف للسلة 🛒 الإجمالي "+money(cartTotal()))}
+function setApp(k){clearCamTimers();state.cam=null;state.app=k;state.screen=APPS[k].screens[0].id;if(k==="admin")state.adminScr=state.screen;render()}
+function go(id){clearCamTimers();state.cam=null;state.screen=id;if(id[0]==="a")state.adminScr=id;if(id[0]==="c")state.app="customer";if(id[0]==="m")state.app="merchant";if(id[0]==="a")state.app="admin";render()}
+function setQty(id,q,storeId){
+ if(storeId&&cartCount()>0&&state.cartStore!==storeId&&q>(state.cart[id]||0)){state.conflict={id:id,storeId:storeId,qty:q};render();return}
+ if(q<=0)delete state.cart[id];else{if(cartCount()===0&&storeId)state.cartStore=storeId;state.cart[id]=q}
+ render();if(q>0&&state.screen==="c-store")toast("اتضاف للسلة 🛒 الإجمالي "+money(cartTotal()))}
+function openStore(id){state.store=id;state.storeCat="الكل";state.screen="c-store";render()}
+function setStoreCat(c){state.storeCat=c;render()}
+function conflictModal(){
+ if(!state.conflict)return "";
+ var cur=storeById(state.cartStore),nw=storeById(state.conflict.storeId);
+ return '<div style="position:absolute;inset:0;background:rgba(20,32,26,.55);z-index:40;display:flex;align-items:flex-end">'+
+ '<div style="background:#FFFDF6;width:100%;border-top:2.5px solid var(--ink2);border-radius:20px 20px 0 0;padding:20px 18px calc(18px + env(safe-area-inset-bottom))">'+
+ '<div style="font-size:34px;text-align:center">🛒</div>'+
+ '<h3 style="margin:4px 0 8px;font-size:19px;font-weight:900;text-align:center">سلتك فيها منتجات من محل تاني — تبدأ سلة جديدة؟</h3>'+
+ '<p style="margin:0 0 16px;font-size:14.5px;color:var(--muted);text-align:center">سلتك الحالية من «'+cur.name+'» والمنتج ده من «'+nw.name+'». السلة الواحدة من محل واحد بس — لو بدأت سلة جديدة، سلتك الحالية هتتفضى.</p>'+
+ '<button class="btn-main" style="justify-content:center;margin-bottom:10px" onclick="confirmNewCart()"><span>ابدأ سلة جديدة من '+nw.name+'</span></button>'+
+ '<button class="btn-ghost" onclick="keepCart()">خليك في سلتك من '+cur.name+'</button></div></div>';
+}
+function confirmNewCart(){var c=state.conflict;state.cart={};state.cartStore=c.storeId;state.cart[c.id]=c.qty;state.conflict=null;render();toast("بدأت سلة جديدة من "+storeById(c.storeId).name+" 🛒")}
+function keepCart(){var n=storeById(state.cartStore).name;state.conflict=null;render();toast("تمام — سلتك زي ما هي من "+n)}
 function setCat(c){state.cat=c;render()}
+function setFulfillment(f){state.fulfillment=f;render();if(f==="pickup")toast("استلام من المحل 🏪 اتشال رسم التوصيل — وفّرت "+money(storeById(state.cartStore).fee))}
 function setPay(p){state.pay=p;render()}
+function toggleWallet(){state.useWallet=!state.useWallet;render();toast(state.useWallet?"اتفعّلت المحفظة 👛 هتتخصم من المستحق الأول":"اتلغى استخدام المحفظة — المستحق كله بطريقة واحدة")}
 function setSub(s){state.sub=s;render()}
-function orderDone(){state.screen="c-track";render();toast("تم استلام طلبك ✅ جاري التحضير — تابع حالته لحظة بلحظة")}
+function orderDone(){state.screen="c-track";render();toast(state.fulfillment==="pickup"?"تم استلام طلبك ✅ المحل بيحضّره — هنبعتلك إشعار أول ما يجهز للاستلام من المحل":"تم استلام طلبك ✅ جاري التحضير — تابع حالته لحظة بلحظة")}
 function reorder(){state.cart={2:1,7:2,10:1};state.screen="c-cart";render();toast("اتحطت أصناف الطلب في السلة")}
-function acceptOrder(){state.screen="m-detail";state.picked={};render();toast("اتقبل الطلب — مؤقّت التحضير بدأ ⏱")}
-function togglePick(id){state.picked[id]=!state.picked[id];render()}
+function acceptOrder(m){clearCamTimers();state.cam=null;state.mMethod=m||"delivery";state.screen="m-detail";state.picked={};state.prep={};state.manualOpen=null;state.scanFx=null;render();toast("اتقبل الطلب — مؤقّت التحضير بدأ ⏱ امسح باركود كل وحدة بالكاميرا وانت بتحضّر")}
 function requestPayout(){state.payoutDone=true;render();toast("اتحوّل رصيدك InstaPay ⚡ 3,810 ج وصلت لحساب المحل")}
 function invDelta(id,d){state.inv[id]=Math.max(0,state.inv[id]+d);render()}
+function feeDelta(d){var st=storeById(1);var nf=st.fee+d;if(nf>50){toast("وصلت للحد الأقصى اللي المنصة حاطاه لرسم التوصيل (50 ج) 🚴");return}if(nf<0){toast("رسم التوصيل مش ممكن يبقى أقل من صفر");return}st.fee=nf;render();toast("اتحدّث رسم توصيل محلك: "+money(st.fee)+" — هيظهر للعملاء في كارت محلك فوراً")}
 function setShare(v){state.share=+v;render()}
 /* SLA timer tick */
 setInterval(function(){if(state.screen==="m-orders"&&state.timer>0){state.timer-=1;var el=document.getElementById("slaTimer");if(el){el.textContent="⏱ "+fmtTimer(state.timer);el.className="timer "+(state.timer>300?"":(state.timer>120?"mid":"late"))}}},1000);
-
 /* ================= DOWNLOADS ================= */
 function dl(name,content,type){var b=new Blob([content],{type:type});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},2000)}
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
@@ -885,7 +1345,7 @@ function downloadSVG(){
  });
  parts.push("</svg>");
  dl("smouha-3apps-screens.figma.svg",parts.join("\n"),"image/svg+xml");
- toast("اتحمّل ملف SVG بالـ16 شاشة — اسحبه داخل Figma وهيتحول لـ Frames وطبقات");
+ toast("اتحمّل ملف SVG بكل الشاشات ("+Object.keys(APPS).reduce(function(a,k){return a+APPS[k].screens.length},0)+") — اسحبه داخل Figma وهيتحول لـ Frames وطبقات");
 }
 function downloadTokens(){
  var tokens={color:{primary:"#16A34A",primaryDark:"#14532D",offer:"#F59E0B",danger:"#DC2626",bg:"#F7F8F7",card:"#FFFFFF",ink:"#14201A",muted:"#5B6B60"},font:{family:"Tajawal",weights:[400,500,700,800,900]},radius:{card:16,button:14,chip:999},status:{new:"#DBEAFE",preparing:"#FEF3C7",onTheWay:"#E0E7FF",delivered:"#DCFCE7",late:"#FEE2E2"},minOrderEGP:null};
